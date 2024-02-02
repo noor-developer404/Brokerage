@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Brokerage"
         tools:targetApi="31">
         <activity
+            android:name=".ui.profileSetup.ProfileSetup"
+            android:exported="false" />
+        <activity
+            android:name=".ui.passwordchanged.PasswordChanged"
+            android:exported="false" />
+        <activity
+            android:name=".ui.createNewPassword.CreateNewPassword"
+            android:exported="false" />
+        <activity
             android:name=".ui.otpvalidation.OTPvalidation"
             android:exported="false" />
         <activity

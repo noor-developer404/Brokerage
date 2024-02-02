@@ -5,4 +5,8 @@
          <item name="colorPrimary">@color/appTheme</item>
         <item name = "android:windowBackground">@color/white</item>
     </style>
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
