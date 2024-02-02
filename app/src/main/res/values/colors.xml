@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="appTheme">#0B0B0B</color>
+    <color name="bg_textinput_color">#ECECEC</color>
+    <color name="iconColorDark">#65000000</color>
+</resources>
