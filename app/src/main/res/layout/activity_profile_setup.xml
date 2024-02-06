@@ -58,7 +58,7 @@
                     android:layout_width="40dp"
                     android:layout_height="60dp"
                     android:src="@drawable/ic_camera"
-                    android:background=""
+                    android:background="#00FFFFFF"
                     android:scaleType="fitCenter"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentEnd="true"/>

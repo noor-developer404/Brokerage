@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.brokerage.R
 import com.example.brokerage.databinding.ActivitySignInBinding
 import com.example.brokerage.ui.forgotPassword.ForgotPassword
+import com.example.brokerage.ui.signup.SignUp
 
 class SignIn : AppCompatActivity() {
     lateinit var binding: ActivitySignInBinding
@@ -16,6 +17,10 @@ class SignIn : AppCompatActivity() {
 
         binding.loginForgotPass.setOnClickListener {
             val intent = Intent(this,ForgotPassword::class.java)
+            startActivity(intent)
+        }
+        binding.signinRegister.setOnClickListener {
+            val intent = Intent(this,SignUp::class.java)
             startActivity(intent)
         }
     }
