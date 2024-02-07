@@ -5,4 +5,22 @@
     <color name="appTheme">#0B0B0B</color>
     <color name="bg_textinput_color">#ECECEC</color>
     <color name="iconColorDark">#65000000</color>
+    <color name="boxColor">#7E6D6D</color>
+    <color name="bg">#5E5E5E</color>
+    <color name="dark">#000000</color>
+    <color name="beige">#F5F5DC</color>
+    <color name="color1">#BEAF87</color>
+    <color name="color2">#F4F2EC</color>
+    <color name="color3">#1F4C6B</color>
+    <color name="color4">#53587A</color>
+    <color name="color5">#A1A5C1</color>
+    <color name="color6">#252B5C</color>
+    <color name="color7">#B3A992</color>
+    <color name="color8">#DFD7C3</color>
+    <color name="color9">#5F5F5F</color>
+    <color name="color10">#8997A9</color>
+    <color name="gray_light">#95A2B0</color>
+<!--    <color name="bg_textinput_color">#EC</color>-->
+<!--    <color name="iconColorDark">#65000000</color>-->
+    <color name="gold">#BEAF87</color>
 </resources>

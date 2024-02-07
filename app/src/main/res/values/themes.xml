@@ -6,5 +6,16 @@
         <item name = "android:windowBackground">@color/white</item>
     </style>
 
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+
     <style name="Theme.Brokerage" parent="Base.Theme.Brokerage" />
+    <style name="ShapeAppeareanceOverlay.App.circleImageView" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight" >rounded</item>
+        <item name="cornerSizeTopLeft">35dp</item>
+        <item name="cornerSizeTopRight">35dp</item>
+    </style>
+
 </resources>
