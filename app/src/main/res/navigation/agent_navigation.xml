@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/agent_navigation"
+    app:startDestination="@id/agentHome">
+
+    <fragment
+        android:id="@+id/agentHome"
+        android:name="com.example.brokerage.ui.agentDashboard.AgentHome"
+        android:label="fragment_agent_home"
+        tools:layout="@layout/fragment_agent_home" />
+    <fragment
+        android:id="@+id/agentListing"
+        android:name="com.example.brokerage.ui.agentDashboard.AgentListing"
+        android:label="fragment_agent_listing"
+        tools:layout="@layout/fragment_agent_listing" />
+    <fragment
+        android:id="@+id/agentSell"
+        android:name="com.example.brokerage.ui.agentDashboard.AgentSell"
+        android:label="fragment_agent_sell"
+        tools:layout="@layout/fragment_agent_sell" />
+    <fragment
+        android:id="@+id/agentShortlisted"
+        android:name="com.example.brokerage.ui.agentDashboard.AgentShortlisted"
+        android:label="fragment_agent_shortlisted"
+        tools:layout="@layout/fragment_agent_shortlisted" />
+    <fragment
+        android:id="@+id/agentProfile"
+        android:name="com.example.brokerage.ui.agentDashboard.AgentProfile"
+        android:label="fragment_agent_profile"
+        tools:layout="@layout/fragment_agent_profile" />
+</navigation>

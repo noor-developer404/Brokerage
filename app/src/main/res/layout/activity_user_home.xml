@@ -1144,13 +1144,10 @@
                                 android:layout_height="73dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="145dp"
-
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-
                                 app:srcCompat="@drawable/circle" />
 
 

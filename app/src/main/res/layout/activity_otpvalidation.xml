@@ -144,7 +144,8 @@
                 android:background="@drawable/bg_textinput"
                 android:src="@drawable/ic_left_arrow"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/OtpvalidatorBtnBack"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
