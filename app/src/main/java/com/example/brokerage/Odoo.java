@@ -28,9 +28,10 @@ public class Odoo extends AppCompatActivity {
 //        emai=@ajath
 
         final String
-//                urlAdmin = "https://www.century21.ae/web",
+                url = "https://www.century21.ae/web",
+//                https://www.century21.ae/web/dataset/call_rpc
 //                dbAdmin = "mazenwb338-century21-prod-5851762",
-                url="https://ajath4.odoo.com/web#action=menu&cids=1",
+//                url="https://ajath4.odoo.com/web",
                 db = "ajath4",
                 username = "Noor",
                 password = "Noor123@";
@@ -44,7 +45,9 @@ public class Odoo extends AppCompatActivity {
         final XmlRpcClientConfigImpl start_config = new XmlRpcClientConfigImpl();
         try {
 //            "https://demo.odoo.com/start"
-            start_config.setServerURL(new URL(url));
+//            start_config.setServerURL(new URL(url));
+            start_config.setServerURL(new URL(String.format("%s/xmlrpc/2/common", url)));
+
 
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
@@ -56,12 +59,13 @@ public class Odoo extends AppCompatActivity {
                 Log.e("odoo", "onCreate: running" );
                 final Map<String, String> info;
                 try {
-                    info = (Map<String, String>)client.execute(
-                            start_config, "start",emptyList());
+                    client.execute(start_config, "version", emptyList());
+//                    info = (Map<String, String>)client.execute(
+//                            start_config, "start",emptyList());
                 } catch (XmlRpcException e) {
                     throw new RuntimeException(e);
                 }
-                Log.e("odoo", "onCreate: "+info );
+                Log.e("odoo", "onCreate: ");
             }
         });
         thread.start();
