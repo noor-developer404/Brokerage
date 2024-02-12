@@ -9,6 +9,7 @@ import com.example.brokerage.R
 import com.example.brokerage.databinding.ActivitySignInBinding
 import com.example.brokerage.ui.forgotPassword.ForgotPassword
 import com.example.brokerage.ui.signup.SignUp
+import com.example.brokerage.ui.userhome.user_home
 import com.google.android.material.button.MaterialButton
 
 class SignIn : AppCompatActivity() {
@@ -18,15 +19,14 @@ class SignIn : AppCompatActivity() {
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        val dialog = Dialog(this)
-//        dialog.setContentView(R.layout.activity_password_changed)
-//        dialog.findViewById<MaterialButton>(R.id.verifyBtn).setOnClickListener {
-//            Toast.makeText(this,"clicked", Toast.LENGTH_SHORT).show()
-//        }
 
         binding.loginForgotPass.setOnClickListener {
-//            val intent = Intent(this,ForgotPassword::class.java)
-//            startActivity(intent)
+            val intent = Intent(this,ForgotPassword::class.java)
+            startActivity(intent)
+        }
+        binding.LoginLoginBtn.setOnClickListener {
+            val intent = Intent(this,user_home::class.java)
+            startActivity(intent)
         }
         binding.signinRegister.setOnClickListener {
             val intent = Intent(this,SignUp::class.java)

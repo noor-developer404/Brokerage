@@ -22,41 +22,49 @@ public class Odoo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_odoo);
 
-        final String url = "https://www.century21.ae/web",
-                db = "mazenwb338-century21-prod-5851762",
-                username = "mobile-app@century21.ae",
-                password = "e89DMZ8pM";
+//        mpass = admin
+//        dbname=admin
+//        pass = admin
+//        emai=@ajath
 
-        OdooManager manager = new OdooManager();
-        manager.authenticate(db,username,password);
-        manager.execute("res.partner","create",emptyList());
+        final String
+//                urlAdmin = "https://www.century21.ae/web",
+//                dbAdmin = "mazenwb338-century21-prod-5851762",
+                url="https://ajath4.odoo.com/web#action=menu&cids=1",
+                db = "ajath4",
+                username = "Noor",
+                password = "Noor123@";
 
-
-//        final XmlRpcClient client = new XmlRpcClient();
-//        final XmlRpcClientConfigImpl start_config = new XmlRpcClientConfigImpl();
-//        try {
-////            "https://demo.odoo.com/start"
-//            start_config.setServerURL(new URL(url));
-//
-//        } catch (MalformedURLException e) {
-//            throw new RuntimeException(e);
-//        }
+//        OdooManager manager = new OdooManager();
+//        manager.authenticate(db,username,password);
+//        manager.execute("res.partner","create",emptyList());
 
 
-//        Thread thread = new Thread(new Runnable() {
-//            @Override public void run() {
-//                Log.e("odoo", "onCreate: running" );
-//                final Map<String, String> info;
-//                try {
-//                    info = (Map<String, String>)client.execute(
-//                            start_config, "start",emptyList());
-//                } catch (XmlRpcException e) {
-//                    throw new RuntimeException(e);
-//                }
-//                Log.e("odoo", "onCreate: "+info );
-//            }
-//        });
-//        thread.start();
+        final XmlRpcClient client = new XmlRpcClient();
+        final XmlRpcClientConfigImpl start_config = new XmlRpcClientConfigImpl();
+        try {
+//            "https://demo.odoo.com/start"
+            start_config.setServerURL(new URL(url));
+
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        Thread thread = new Thread(new Runnable() {
+            @Override public void run() {
+                Log.e("odoo", "onCreate: running" );
+                final Map<String, String> info;
+                try {
+                    info = (Map<String, String>)client.execute(
+                            start_config, "start",emptyList());
+                } catch (XmlRpcException e) {
+                    throw new RuntimeException(e);
+                }
+                Log.e("odoo", "onCreate: "+info );
+            }
+        });
+        thread.start();
 
 
     }
