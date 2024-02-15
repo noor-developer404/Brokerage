@@ -29,5 +29,6 @@ class MainActivity : AppCompatActivity() {
         clientConfig.serverURL= URL(url)
 
 //        client.execute(clientConfig,"start", )
+//        helped teammates in creating Screens of Brokerage App
     }
 }
