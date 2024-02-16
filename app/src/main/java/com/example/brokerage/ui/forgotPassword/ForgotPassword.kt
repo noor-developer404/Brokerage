@@ -14,7 +14,7 @@ class ForgotPassword : AppCompatActivity() {
         binding = ActivityForgotPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.SendCodeBtn.setOnClickListener {
+        binding.sendCodeBtn.setOnClickListener {
             val intent = Intent(this,OTPvalidation::class.java)
             startActivity(intent)
         }

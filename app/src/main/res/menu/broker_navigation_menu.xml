@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:icon="@drawable/baseline_search_24"
+        android:id="@+id/nav_search"
+        android:title="Search for properties" />
+
+    <item
+        android:icon="@drawable/baseline_home_filled_24"
+        android:id="@+id/nav_home"
+        android:title="Home" />
+
+    <item
+        android:icon="@drawable/increase"
+        android:id="@+id/nav_myPerformance"
+        android:title="Office Performance" />
+
+    <item
+        android:icon="@drawable/baseline_check_circle_outline_24"
+        android:id="@+id/nav_pipelines"
+        android:title="Office Active Pipelines" />
+
+    <item
+        android:icon="@drawable/lead"
+        android:id="@+id/nav_leadStatus"
+        android:title="Leads Status" />
+
+    <item
+        android:icon="@drawable/total_meetings"
+        android:id="@+id/nav_Officeleads"
+        android:title="Office Leads" />
+
+
+    <item
+        android:icon="@drawable/training"
+        android:id="@+id/nav_training"
+        android:title="Staff Training" />
+
+    <item
+        android:icon="@drawable/accounting"
+        android:id="@+id/nav_accounting"
+        android:title="Accounting" />
+
+    <item
+        android:icon="@drawable/baseline_balance_24"
+        android:id="@+id/nav_legal"
+        android:title="Legal" />
+
+    <item
+        android:icon="@drawable/baseline_campaign_24"
+        android:id="@+id/nav_marketing"
+        android:title="Marketing" />
+
+    <item
+        android:icon="@drawable/report"
+        android:id="@+id/nav_reporting"
+        android:title="Reporting" />
+
+    <item
+        android:icon="@drawable/evaluating"
+        android:id="@+id/nav_evaluating"
+        android:title="Evaluate Staff" />
+    <item
+        android:icon="@drawable/baseline_question_mark_24"
+        android:id="@+id/nav_help"
+        android:title="Help" />
+
+    <item
+        android:icon="@drawable/baseline_settings_24"
+        android:id="@+id/nav_settings"
+        android:title="Settings" />
+
+    <item
+        android:icon="@drawable/baseline_logout_24"
+        android:id="@+id/nav_logout"
+        android:title="Logout" />
+
+</menu>

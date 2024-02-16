@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:icon="@drawable/baseline_search_24"
+        android:id="@+id/nav_search"
+        android:title="Search for properties" />
+    <item
+        android:icon="@drawable/baseline_home_filled_24"
+        android:id="@+id/nav_home"
+        android:title="Home" />
+
+    <item
+        android:icon="@drawable/rent_property"
+        android:id="@+id/nav_rentP"
+        android:title="Properties for Rent" />
+
+    <item
+        android:icon="@drawable/buy_property"
+        android:id="@+id/nav_buyP"
+        android:title="Properties for Buy" />
+
+    <item
+        android:icon="@drawable/baseline_list_alt_24"
+        android:id="@+id/nav_listProperty"
+        android:title="List Your Property" />
+
+    <item
+        android:icon="@drawable/insight"
+        android:id="@+id/nav_insight"
+        android:title="Insights" />
+
+    <item
+        android:icon="@drawable/service"
+        android:id="@+id/nav_service"
+        android:title="Services" />
+
+    <item
+        android:icon="@drawable/baseline_info_24"
+        android:id="@+id/nav_about"
+        android:title="About" />
+
+
+    <item
+        android:icon="@drawable/baseline_question_mark_24"
+        android:id="@+id/nav_help"
+        android:title="Help" />
+
+    <item
+        android:icon="@drawable/baseline_settings_24"
+        android:id="@+id/nav_settings"
+        android:title="Settings" />
+
+    <item
+        android:icon="@drawable/baseline_logout_24"
+        android:id="@+id/nav_logout"
+        android:title="Logout" />
+
+</menu>

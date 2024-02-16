@@ -91,7 +91,7 @@
             android:layout_marginHorizontal="20dp"
             android:text="Login"
             android:layout_marginTop="20dp"
-            android:id="@+id/Login_LoginBtn"/>
+            android:id="@+id/signin_login_btn"/>
 
         <LinearLayout
             android:layout_width="match_parent"

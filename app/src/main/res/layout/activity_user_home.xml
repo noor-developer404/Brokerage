@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.userhome.user_home">
+    tools:openDrawer="end">
+
+
+    <!-- this the navigation view which draws and shows the navigation drawer -->
+    <!-- include the menu created in the menu folder -->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/agent_navigation_menu" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,6 +28,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/toolbar"/>
+
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -28,7 +45,7 @@
                     android:id="@+id/menuBar"
                     android:layout_width="25dp"
                     android:layout_height="22dp"
-                    android:src="@drawable/menu"
+                    android:src="@drawable/baseline_menu_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -39,7 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="location"
+                    android:text="Location"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/menuBar" />
 
@@ -47,14 +64,15 @@
                     android:id="@+id/imageView3"
                     android:layout_width="18dp"
                     android:layout_height="23dp"
-                    android:src="@drawable/location"
+                    android:src="@drawable/baseline_location_on_24"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/locationText" />
 
-                <Spinner
+                <TextView
                     android:id="@+id/loactionSpinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Dubai, United Arab Emirates"
                     android:layout_marginStart="4dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -86,8 +104,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_textinput"
-                    android:drawableStart="@drawable/search"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/baseline_search_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
                     android:hint="Search by Address, City or ZIP"
@@ -96,7 +114,6 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="48dp"
                     android:layout_height="match_parent"
-
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/filter_background">
@@ -229,20 +246,21 @@
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:scrollbars="none">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:background="@drawable/rounded_corners_nav">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="250dp"
                             android:layout_height="260dp"
                             android:layout_margin="8dp"
                             android:background="@drawable/bg_textinput"
-                            android:elevation="3dp">
+                            android:elevation="3dp"
+                            android:id="@+id/property1">
 
                             <!-- Circular background -->
 
@@ -252,7 +270,6 @@
                                 android:id="@+id/imageViewl1"
                                 android:layout_width="250dp"
                                 android:layout_height="145dp"
-
                                 android:layout_marginBottom="145dp"
                                 android:scaleType="centerCrop"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -277,12 +294,12 @@
                                 app:layout_constraintVertical_bias="0.09" />
 
                             <ImageView
-                                android:id="@+id/heartl1"
+                                android:id="@+id/like"
                                 android:layout_width="14dp"
                                 android:layout_height="14dp"
 
                                 android:scaleY="-1"
-                                android:src="@drawable/heart"
+                                android:src="@drawable/like"
 
                                 app:layout_constraintBottom_toBottomOf="@+id/circlel1"
                                 app:layout_constraintEnd_toEndOf="@+id/circlel1"
@@ -320,7 +337,7 @@
                                 android:layout_height="18dp"
 
                                 android:layout_marginTop="8dp"
-                                android:src="@drawable/location"
+                                android:src="@drawable/baseline_location_on_24"
 
                                 app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintStart_toStartOf="@+id/texttitle"
@@ -371,7 +388,9 @@
                             android:layout_height="260dp"
                             android:layout_margin="8dp"
                             android:background="@drawable/bg_textinput"
-                            android:elevation="3dp">
+                            android:elevation="3dp"
+                            android:id="@+id/property4"
+                            >
 
                             <!-- Circular background -->
 
@@ -411,7 +430,7 @@
                                 android:layout_height="14dp"
 
                                 android:scaleY="-1"
-                                android:src="@drawable/heart"
+                                android:src="@drawable/like"
 
                                 app:layout_constraintBottom_toBottomOf="@+id/circlel2"
                                 app:layout_constraintEnd_toEndOf="@+id/circlel2"
@@ -449,7 +468,7 @@
                                 android:layout_height="18dp"
 
                                 android:layout_marginTop="8dp"
-                                android:src="@drawable/location"
+                                android:src="@drawable/baseline_location_on_24"
                                 app:layout_constraintEnd_toStartOf="@+id/textlocl2"
                                 app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintStart_toStartOf="@+id/texttitlel2"
@@ -540,7 +559,7 @@
                                 android:layout_height="14dp"
 
                                 android:scaleY="-1"
-                                android:src="@drawable/heart"
+                                android:src="@drawable/like"
 
                                 app:layout_constraintBottom_toBottomOf="@+id/circlel3"
                                 app:layout_constraintEnd_toEndOf="@+id/circlel3"
@@ -578,7 +597,7 @@
                                 android:layout_height="18dp"
 
                                 android:layout_marginTop="8dp"
-                                android:src="@drawable/location"
+                                android:src="@drawable/baseline_location_on_24"
                                 app:layout_constraintEnd_toStartOf="@+id/textViewl3"
                                 app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintStart_toStartOf="@+id/texttitlel3"
@@ -681,7 +700,8 @@
                             android:layout_height="260dp"
                             android:layout_margin="8dp"
                             android:background="@drawable/bg_textinput"
-                            android:elevation="3dp">
+                            android:elevation="3dp"
+                            android:id="@+id/property3">
 
                             <!-- Circular background -->
 
@@ -721,7 +741,7 @@
                                 android:layout_height="14dp"
 
                                 android:scaleY="-1"
-                                android:src="@drawable/heart"
+                                android:src="@drawable/like"
 
                                 app:layout_constraintBottom_toBottomOf="@+id/circlen1"
                                 app:layout_constraintEnd_toEndOf="@+id/circlen1"
@@ -759,7 +779,7 @@
                                 android:layout_height="18dp"
 
                                 android:layout_marginTop="8dp"
-                                android:src="@drawable/location"
+                                android:src="@drawable/baseline_location_on_24"
                                 app:layout_constraintEnd_toStartOf="@+id/textlocn1"
                                 app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintStart_toStartOf="@+id/texttitlen1"
@@ -851,7 +871,7 @@
                                 android:layout_height="14dp"
 
                                 android:scaleY="-1"
-                                android:src="@drawable/heart"
+                                android:src="@drawable/like"
 
                                 app:layout_constraintBottom_toBottomOf="@+id/circlen2"
                                 app:layout_constraintEnd_toEndOf="@+id/circlen2"
@@ -889,7 +909,7 @@
                                 android:layout_height="18dp"
 
                                 android:layout_marginTop="8dp"
-                                android:src="@drawable/location"
+                                android:src="@drawable/baseline_location_on_24"
                                 app:layout_constraintEnd_toStartOf="@+id/textlocn2"
                                 app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintStart_toStartOf="@+id/texttitlen2"
@@ -980,7 +1000,7 @@
                                 android:layout_height="14dp"
 
                                 android:scaleY="-1"
-                                android:src="@drawable/heart"
+                                android:src="@drawable/like"
 
                                 app:layout_constraintBottom_toBottomOf="@+id/circlen3"
                                 app:layout_constraintEnd_toEndOf="@+id/circlen3"
@@ -1019,7 +1039,7 @@
                                 android:layout_height="18dp"
 
                                 android:layout_marginTop="8dp"
-                                android:src="@drawable/location"
+                                android:src="@drawable/baseline_location_on_24"
                                 app:layout_constraintEnd_toStartOf="@+id/textViewn3"
                                 app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintStart_toStartOf="@+id/texttitlen3"
@@ -1144,10 +1164,13 @@
                                 android:layout_height="73dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="145dp"
+
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
+
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
+
                                 app:srcCompat="@drawable/circle" />
 
 
@@ -1219,9 +1242,15 @@
                     android:text="Articles" />
             </com.google.android.material.tabs.TabLayout>
 
+
+
+
             <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp">
+                android:layout_height="100dp" >
+               <!-- android:layout_constrainEnd_toEndOf="parent"
+                android:layout_constraintBottomOf_toBottomOf="parent"
+                android:layout_constraintStart_toStartOf="parent" -->
 
                 <com.google.android.material.bottomappbar.BottomAppBar
                     android:layout_width="match_parent"
@@ -1245,7 +1274,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
 
-                                android:src="@drawable/home" />
+                                android:src="@drawable/baseline_home_filled_24" />
 
                             <TextView
                                 android:id="@+id/homeText"
@@ -1268,7 +1297,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
 
-                                android:src="@drawable/search" />
+                                android:src="@drawable/baseline_search_24" />
 
                             <TextView
                                 android:id="@+id/searchText"
@@ -1290,8 +1319,7 @@
                                 android:id="@+id/addIcon"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
-                                android:src="@drawable/add" />
+                                android:src="@drawable/baseline_add_circle_24" />
 
                             <TextView
                                 android:id="@+id/addText"
@@ -1313,8 +1341,7 @@
                                 android:id="@+id/shortIcon"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-
-                                android:src="@drawable/shortlist" />
+                                android:src="@drawable/baseline_favorite_border_24" />
 
                             <TextView
                                 android:id="@+id/shortText"
@@ -1337,7 +1364,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
 
-                                android:src="@drawable/profile" />
+                                android:src="@drawable/ic_person" />
 
                             <TextView
                                 android:id="@+id/profileText"
@@ -1362,4 +1389,5 @@
 
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>

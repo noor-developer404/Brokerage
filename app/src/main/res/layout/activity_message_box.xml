@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.property_details.property_details"
+    android:isScrollContainer="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.messagebox.MessageBox">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="36dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="13dp"
+        app:cardCornerRadius="19dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/color13">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_keyboard_arrow_left_24"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="4dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+            android:textSize="25dp"
+            android:textColor="@color/color12"
+            android:textStyle="bold"
+          android:layout_marginStart="120dp"
+            android:layout_marginTop="13dp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+      android:id="@+id/linearLayoutInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="390dp"
+        app:layout_constraintTop_toTopOf="@+id/recyclerViewChat"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewChat">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_attachment_24"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"/>
+
+        <EditText
+            android:id="@+id/typemsg"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="10dp"
+            android:drawableRight="@drawable/baseline_mic_24"
+            android:hint="Type something"
+          android:background="@color/keyboardbg"
+            />
+<ImageView
+    android:id="@+id/sendIcon"
+    android:layout_width="30dp"
+    android:layout_height="50dp"
+    android:src="@drawable/baseline_send_24"
+    android:layout_marginTop="13dp"
+    android:layout_marginStart="10dp"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
