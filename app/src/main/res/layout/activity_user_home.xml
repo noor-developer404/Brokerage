@@ -6,7 +6,9 @@
     android:id="@+id/my_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:openDrawer="end">
+    tools:openDrawer="end"
+    tools:context=".ui.userhome.user_home"
+    >
 
 
     <!-- this the navigation view which draws and shows the navigation drawer -->
@@ -116,7 +118,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="24dp"
-                    android:background="@drawable/filter_background">
+                    android:background="@drawable/filter_background"
+                    android:id="@+id/userHomeFilter">
 
                     <ImageView
                         android:id="@+id/imageView5"
@@ -227,10 +230,9 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/viewAll1"
+                    android:id="@+id/userhome_viewall_latest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:text="View all >" />
             </LinearLayout>
 
@@ -668,7 +670,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/viewAll2"
+                    android:id="@+id/userhome_viewall_nearby"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 

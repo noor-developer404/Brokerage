@@ -20,7 +20,7 @@ class PropertyListingActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Initialize Adapter
-        adapter = PropertyListAdapter(emptyList())
+        adapter = PropertyListAdapter(emptyList(),this)
         recyclerView.adapter = adapter
 
         // Placeholder data (Update when API is available)

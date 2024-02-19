@@ -586,7 +586,8 @@
                 android:text="Apply"
                 android:layout_marginTop="17dp"
                 android:layout_marginStart="220dp"
-                android:backgroundTint="@color/color1"/>
+                android:backgroundTint="@color/color1"
+                android:id="@+id/filter_apply"/>
         </androidx.cardview.widget.CardView>
 
 

@@ -201,7 +201,7 @@
             app:cornerRadius="10dp"
             android:layout_marginHorizontal="20dp"
             android:text="Next >"
-            android:textSize="25sp"
+            android:textSize="22sp"
             android:id="@+id/signup_next_btn"/>
     </LinearLayout>
 

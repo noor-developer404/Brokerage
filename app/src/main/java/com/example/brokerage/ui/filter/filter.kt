@@ -6,12 +6,19 @@ import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import com.example.brokerage.R
+import com.example.brokerage.databinding.ActivityFilterBinding
 
 class filter : AppCompatActivity() {
+    lateinit var binding: ActivityFilterBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_filter)
+        binding = ActivityFilterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        binding.filterApply.setOnClickListener {
+            this.finish()
+        }
 
         //seekbar
 

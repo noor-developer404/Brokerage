@@ -7,18 +7,26 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.brokerage.R
+import com.example.brokerage.databinding.ActivityBidBinding
+import com.example.brokerage.databinding.ActivityFilterBinding
 
 class BidActivity : AppCompatActivity() {
 
     private var count = 45000 // Initial value
+    lateinit var binding: ActivityBidBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bid)
+        binding = ActivityBidBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val incrementButton = findViewById<Button>(R.id.incrementButton)
         val decrementButton = findViewById<Button>(R.id.decrementButton)
         val valueTextView = findViewById<TextView>(R.id.valueTextView)
+
+        binding.bidSubmitBtn.setOnClickListener {
+            this.finish()
+        }
 
         val bid1 = findViewById<TextView>(R.id.bid1)
         bid1.setOnClickListener {

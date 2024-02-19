@@ -1,3 +1,5 @@
+package com.example.brokerage.ui.messagebox
+
 import android.content.Context
 import android.os.Bundle
 import android.view.ViewTreeObserver

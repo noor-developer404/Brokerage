@@ -6,8 +6,6 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.brokerage.R.*
 import com.google.android.material.button.MaterialButton
-import org.apache.xmlrpc.client.XmlRpcClient
-import org.apache.xmlrpc.client.XmlRpcClientConfigImpl
 import java.net.URL
 
 class MainActivity : AppCompatActivity() {
