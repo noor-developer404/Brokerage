@@ -25,7 +25,6 @@
 
 
         <ImageView
-            android:id="@+id/call1_backbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -115,7 +114,6 @@
                 android:backgroundTint="@color/red">
 
                 <ImageView
-                    android:id="@+id/btn_hang_up"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/baseline_call_end_24"

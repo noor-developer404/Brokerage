@@ -14,14 +14,13 @@ import com.example.brokerage.ui.bid.BidActivity
 import com.example.brokerage.ui.filter.filter
 import com.example.brokerage.ui.property_details.property_details
 
-class PropertyListAdapter(private var properties: List<Property>,var context:Context) :
+class PropertyListAdapter(private var properties: List<PropertyListingActivity.Property>, var context:Context) :
     RecyclerView.Adapter<PropertyListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_property_listing, parent, false)
         return ViewHolder(view)
     }
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val property = properties[position]
         holder.propertyText.text = property.text
@@ -42,7 +41,7 @@ class PropertyListAdapter(private var properties: List<Property>,var context:Con
         return properties.size
     }
 
-    fun updateData(newProperties: List<Property>) {
+    fun updateData(newProperties: List<PropertyListingActivity.Property>) {
         properties = newProperties
         notifyDataSetChanged()
     }
@@ -51,6 +50,6 @@ class PropertyListAdapter(private var properties: List<Property>,var context:Con
         val propertyImage: ImageView = itemView.findViewById(R.id.property_image)
         val propertyText: TextView = itemView.findViewById(R.id.goldText)
         val propertyTitle: TextView = itemView.findViewById(R.id.property_title)
-        val bid_btn= itemView.findViewById<Button>(R.id.rvItemBid)
+        val bid_btn= itemView.findViewById<Button>(R.id.bid_button)
     }
 }

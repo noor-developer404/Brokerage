@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/userhomebg"
+    tools:context=".ui.propertylisting.PropertyListingActivity"
+    tools:openDrawer="end">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/property_listing_toolbar"
+
+    <!-- this the navigation view which draws and shows the navigation drawer -->
+    <!-- include the menu created in the menu folder -->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/agent_navigation_menu" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-318dp">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white" >
+        android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
 
         <TextView
             android:id="@+id/properties"
@@ -17,29 +46,23 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Properties"
+            android:layout_marginTop="-2dp"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
-        <ImageView
-            android:id="@+id/menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_menu_24"
-            />
 
         <ImageView
             android:id="@+id/bell"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/bell"
+            android:layout_marginTop="-20dp"
             android:layout_gravity="end"
             android:layout_marginEnd="16dp"
 
             />
 
 
-
-    </androidx.appcompat.widget.Toolbar>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -50,3 +73,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+    </androidx.drawerlayout.widget.DrawerLayout>

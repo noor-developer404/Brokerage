@@ -462,8 +462,7 @@ android:isScrollContainer="true">
         android:layout_marginTop="925dp"
         android:layout_marginStart="35dp"
         android:text="Submit Your Bid"
-        android:textSize="15dp"
-        android:id="@+id/bid_submit_btn"/>
+        android:textSize="15dp"/>
 
     <Button
         android:layout_width="320dp"
