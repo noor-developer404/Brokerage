@@ -16,5 +16,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(layout.activity_main)
 
 //        Brokerage app merging
+//        i have nothing to commit
     }
 }
