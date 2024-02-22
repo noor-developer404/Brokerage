@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -12,23 +13,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Brokerage"
         tools:ignore="ExtraText"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.ContactList"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.agentstatus.AgentStatus"
             android:exported="false" />
         <activity
             android:name=".ui.splashscreen.SplashScreen"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+        </activity>
         <activity
             android:name=".ui.propertylisting.PropertyListingActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".ui.call2.Call2"
             android:exported="false" />
@@ -64,8 +70,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.userhome.user_home"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".ui.brokerDashboard.BrokerDashboard"
             android:exported="false" />
