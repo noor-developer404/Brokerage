@@ -6,6 +6,8 @@ import android.os.Bundle
 import com.example.brokerage.R
 import com.example.brokerage.databinding.ActivityForgotPasswordBinding
 import com.example.brokerage.ui.otpvalidation.OTPvalidation
+import com.example.brokerage.ui.signin.SignIn
+import com.example.brokerage.ui.signup.SignUp
 
 class ForgotPassword : AppCompatActivity() {
     lateinit var binding: ActivityForgotPasswordBinding
@@ -16,6 +18,14 @@ class ForgotPassword : AppCompatActivity() {
 
         binding.sendCodeBtn.setOnClickListener {
             val intent = Intent(this,OTPvalidation::class.java)
+            startActivity(intent)
+        }
+        binding.Login.setOnClickListener {
+            val intent = Intent(this, SignIn::class.java)
+            startActivity(intent)
+        }
+        binding.BackF.setOnClickListener {
+            val intent = Intent(this, SignIn::class.java)
             startActivity(intent)
         }
     }

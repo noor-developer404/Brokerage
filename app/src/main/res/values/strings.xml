@@ -12,6 +12,24 @@ Round the clock security.</string>
         <item>2 year</item>
     </string-array>
 
+    <string-array name="role">
+        <item>Client</item>
+        <item>Agent</item>
+        <item>Broker</item>
+
+    </string-array>
+
+    <string-array name="location">
+        <item>Mumbai</item>
+        <item>Kanpur</item>
+        <item>Agra</item>
+        <item>Bihar</item>
+        <item>Delhi</item>
+        <item>Meghalaya</item>
+
+    </string-array>
+
+
     <!-- to toggle the open close button of the navigation drawer -->
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>

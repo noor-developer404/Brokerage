@@ -21,7 +21,14 @@
             android:exported="false" />
         <activity
             android:name=".ui.splashscreen.SplashScreen"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".ui.propertylisting.PropertyListingActivity"
             android:exported="false" />
@@ -48,9 +55,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.agentDashboard.AgentDashboard"
-            android:exported="true">
-
-        </activity>
+            android:exported="false" />
 
         <activity
             android:name=".ui.newmeetingpopup.New_Meeting_Popup"
@@ -68,25 +73,25 @@
 
         <activity
             android:name=".ui.brokerDashboard.BrokerDashboard"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".ui.meetings.meetings"
             android:exported="false" />
 
         <activity
             android:name=".ui.meeting_schedule.meeting_schedule"
-            android:exported="true" >
+            android:exported="false" />
 
-    </activity>
         <activity
             android:name=".ui.bid.BidActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.profileSetup.ProfileSetup"
+            android:exported="true" >
+
+        </activity>
+
         <activity
             android:name=".ui.reviews.reviews"
             android:exported="false" />
@@ -102,12 +107,12 @@
             android:exported="false" />
         <activity
             android:name=".ui.signin.SignIn"
-            android:exported="false" />
+            android:exported="true">
+        </activity>
         <activity
             android:name=".ui.signup.SignUp"
-            android:exported="true">
+            android:exported="false" />
 
-        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />

@@ -9,6 +9,8 @@ import com.google.android.material.tabs.TabLayoutMediator
 import android.content.Intent
 import com.example.brokerage.ui.bid.BidActivity
 import com.example.brokerage.ui.call1.Call1
+import com.example.brokerage.ui.signup.SignUp
+import com.example.brokerage.ui.userhome.user_home
 
 class property_details : AppCompatActivity() {
     val nameList = arrayOf("Details","Gallery","Reviews")
@@ -18,7 +20,10 @@ class property_details : AppCompatActivity() {
         binding=ActivityPropertyDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        binding.propertiesDetailsBackBtn.setOnClickListener {
+            val intent = Intent(this, user_home::class.java)
+            startActivity(intent)
+        }
         val adapter = FragmentAdapter(supportFragmentManager,lifecycle)
 
         binding.vp2.adapter=adapter

@@ -171,8 +171,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_f"
             android:background="@drawable/bg_textinput"
-            android:paddingHorizontal="30dp"
-            android:paddingVertical="10dp"/>
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="15dp"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

@@ -1,12 +1,16 @@
 package com.example.brokerage.ui.filter
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import com.example.brokerage.R
 import com.example.brokerage.databinding.ActivityFilterBinding
+import com.example.brokerage.ui.property_details.property_details
 
 
 class filter : AppCompatActivity() {
@@ -20,6 +24,20 @@ class filter : AppCompatActivity() {
         binding.filterApply.setOnClickListener {
             this.finish()
         }
+
+        binding.filterBack.setOnClickListener {
+            val intent = Intent(this, property_details::class.java)
+            startActivity(intent)
+        }
+
+//      var House =   findViewById<CardView>(R.id.filterHouse)
+//        House.setOnClickListener{
+//
+//            House.setCardBackgroundColor(R.color.black);
+////            House.setBackgroundColor(R.color.color1);
+//        }
+
+
         //seekbar
 
         val seek = findViewById<SeekBar>(R.id.seekBar)

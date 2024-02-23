@@ -93,8 +93,8 @@ android:isScrollContainer="true">
     <androidx.cardview.widget.CardView
         android:layout_width="125dp"
         android:layout_height="40dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginStart="230dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginStart="225dp"
         app:cardCornerRadius="15dp"
         android:backgroundTint="@color/color8">
 
@@ -176,7 +176,7 @@ android:isScrollContainer="true">
         android:layout_width="344dp"
         android:layout_height="120dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="6dp"
         android:layout_marginTop="375dp"
         android:backgroundTint="@color/color11"
         app:cardCornerRadius="10dp">
@@ -187,7 +187,7 @@ android:isScrollContainer="true">
             android:layout_width="1dp"
             android:layout_height="93dp"
             android:layout_centerVertical="true"
-            android:layout_marginStart="163dp"
+            android:layout_marginStart="156dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             android:background="@color/white" />
@@ -199,7 +199,7 @@ android:isScrollContainer="true">
             android:layout_marginTop="10dp"
             android:text="Starting Price"
             android:textColor="@color/color12"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <TextView
@@ -209,7 +209,7 @@ android:isScrollContainer="true">
             android:layout_marginTop="48dp"
             android:text="5,000 AED"
             android:textColor="@color/color12"
-            android:textSize="25dp" />
+            android:textSize="22dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -218,7 +218,7 @@ android:isScrollContainer="true">
             android:layout_marginTop="10dp"
             android:text="Current Bid Price"
             android:textColor="@color/color12"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <TextView
@@ -228,7 +228,7 @@ android:isScrollContainer="true">
             android:layout_marginTop="48dp"
             android:text="24,500 AED"
             android:textColor="@color/color12"
-            android:textSize="25dp" />
+            android:textSize="22dp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -336,14 +336,14 @@ android:isScrollContainer="true">
         android:layout_height="wrap_content"
         android:text="Please enter your bid amount"
         android:textSize="23dp"
-        android:layout_marginStart="41dp"
+        android:layout_marginStart="39dp"
         android:layout_marginTop="700dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_marginTop="750dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         app:cardCornerRadius="7dp"
         >
 
@@ -361,7 +361,7 @@ android:isScrollContainer="true">
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_marginTop="750dp"
-        android:layout_marginStart="112dp"
+        android:layout_marginStart="102dp"
         app:cardCornerRadius="7dp">
 
         <TextView
@@ -379,7 +379,7 @@ android:isScrollContainer="true">
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_marginTop="750dp"
-        android:layout_marginStart="204dp"
+        android:layout_marginStart="194dp"
         app:cardCornerRadius="7dp">
 
         <TextView
@@ -397,7 +397,7 @@ android:isScrollContainer="true">
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_marginTop="750dp"
-        android:layout_marginStart="294dp"
+        android:layout_marginStart="284dp"
         app:cardCornerRadius="7dp">
 
         <TextView
@@ -416,7 +416,7 @@ android:isScrollContainer="true">
         android:id="@+id/decrementButton"
         android:layout_width="60dp"
         android:layout_height="45dp"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="840dp"
         android:backgroundTint="@color/color1"
         android:onClick="decrement"
@@ -428,7 +428,7 @@ android:isScrollContainer="true">
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="840dp"
-        android:layout_marginStart="120dp"
+        android:layout_marginStart="110dp"
         app:cardCornerRadius="10dp">
 
     <TextView
@@ -452,7 +452,7 @@ android:isScrollContainer="true">
         android:text="+"
         android:textSize="20dp"
         android:layout_marginTop="840dp"
-        android:layout_marginStart="293dp"
+        android:layout_marginStart="283dp"
         android:backgroundTint="@color/color1"
         android:onClick="increment" />
 
@@ -460,7 +460,7 @@ android:isScrollContainer="true">
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="925dp"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="25dp"
         android:text="Submit Your Bid"
         android:textSize="15dp"/>
 
@@ -468,7 +468,7 @@ android:isScrollContainer="true">
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="990dp"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="25dp"
         android:text="Cancel"
         android:textSize="15dp"
         android:textColor="@color/black"

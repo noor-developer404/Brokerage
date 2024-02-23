@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.brokerage.R
 import com.example.brokerage.databinding.ActivityOtpvalidationBinding
+import com.example.brokerage.ui.forgotPassword.ForgotPassword
 import com.example.brokerage.ui.passwordchanged.PasswordChanged
 
 class OTPvalidation : AppCompatActivity() {
@@ -17,6 +18,10 @@ class OTPvalidation : AppCompatActivity() {
 
         binding.verifyBtn.setOnClickListener {
             val intent = Intent(this,PasswordChanged::class.java)
+            startActivity(intent)
+        }
+        binding.back.setOnClickListener {
+            val intent = Intent(this,ForgotPassword::class.java)
             startActivity(intent)
         }
     }

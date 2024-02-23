@@ -118,8 +118,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="40dp">
+                android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -127,7 +126,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="00:30a"
+                    android:text="00:30s"
                     android:paddingLeft="10sp"/>
             </LinearLayout>
         </LinearLayout>
@@ -137,6 +136,7 @@
             android:layout_height="250dp">
 
             <ImageButton
+                android:id="@+id/back"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/bg_textinput"
