@@ -31,6 +31,7 @@ class PropertyListAdapter(private var properties: List<PropertyListingActivity.P
             val intent = Intent(context, BidActivity::class.java)
             context.startActivity(intent)
         }
+
         holder.itemView.setOnClickListener {
             val intent = Intent(context, property_details::class.java)
             context.startActivity(intent)

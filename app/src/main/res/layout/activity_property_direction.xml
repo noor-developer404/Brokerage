@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.reviews.reviews"
+    tools:context=".ui.propertydirection.PropertyDirection"
     android:isScrollContainer="true">
 
     <RelativeLayout
@@ -103,6 +103,7 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
+            android:id="@+id/DirectionFilter"
             android:layout_width="45dp"
             android:layout_height="40dp"
             android:src="@drawable/filter"

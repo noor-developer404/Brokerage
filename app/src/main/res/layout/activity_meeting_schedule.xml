@@ -9,24 +9,33 @@
     tools:context=".ui.meeting_schedule.meeting_schedule"
     android:isScrollContainer="true">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
     <RelativeLayout
+        android:id="@+id/rvMeetSchedule"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
             android:layout_width="36dp"
             android:layout_height="35dp"
-            android:layout_marginTop="18dp"
             android:layout_marginStart="12dp"
-            app:cardCornerRadius="19dp"
-            android:backgroundTint="@color/color13">
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/color13"
+            app:cardCornerRadius="19dp">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/baseline_keyboard_arrow_left_24"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="4dp"/>
+                android:layout_marginTop="4dp"
+                android:src="@drawable/baseline_keyboard_arrow_left_24" />
 
 
         </androidx.cardview.widget.CardView>
@@ -35,304 +44,78 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Meetings"
-            android:textSize="25dp"
-            android:textColor="@color/color6"
             android:layout_marginStart="140dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:text="Meetings"
+            android:textColor="@color/color6"
+            android:textSize="25dp" />
 
         <!-- Horizontal line -->
         <View
             android:id="@+id/line1"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/color10"
-            android:layout_marginTop="69dp" />
+            android:layout_marginTop="69dp"
+            android:background="@color/color10" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutMeet"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Upcoming"
-            android:textColor="@color/color1"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:layout_marginTop="80dp"
-            android:layout_marginStart="20dp"/>
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="65dp">
 
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="360dp"
-            android:layout_height="230dp"
-            android:layout_marginTop="129dp"
-            android:layout_marginStart="20dp"
-            app:cardCornerRadius="10dp"
-            android:backgroundTint="@color/color11">
-
-            <TextView
+            <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="May 22, 2023 - 11:00 AM - 11:15 AM"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/color14"
-                android:textStyle="bold"
-                android:textSize="17dp"/>
+                android:text="Upcoming" />
 
-            <!-- Horizontal line -->
-            <View
-                android:layout_width="290dp"
-                android:layout_height="1dp"
-                android:background="@color/color10"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
+            <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Meeting Title"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="60dp"
-                android:textColor="@color/color14"
-                android:textStyle="bold"
-                android:textSize="17dp"/>
+                android:text="Completed"
+                tools:layout_editor_absoluteX="133dp"
+                tools:layout_editor_absoluteY="112dp" />
 
-            <TextView
+            <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="15 minute meeting (clone)"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="88dp"
-                android:textColor="@color/color3"
-                android:textSize="17dp"/>
+                android:text="Cancelled" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mode : Virtual "
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="115dp"
-                android:textColor="@color/color3"
-                android:textSize="17dp"/>
+        </com.google.android.material.tabs.TabLayout>
 
-            <View
-                android:layout_width="290dp"
-                android:layout_height="1dp"
-                android:background="@color/color10"
-                android:layout_marginTop="155dp"
-                android:layout_marginStart="20dp"/>
+    </RelativeLayout>
 
-            <Button
-                android:layout_width="125dp"
-                android:layout_height="45dp"
-                android:text="Cancel"
-                android:textColor="@color/color15"
-                android:backgroundTint="@color/color16"
-                android:layout_marginTop="165dp"
-                android:layout_marginStart="20dp"/>
-
-            <Button
-                android:layout_width="125dp"
-                android:layout_height="45dp"
-                android:text="Reschedule"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/color15"
-                android:layout_marginTop="165dp"
-                android:layout_marginStart="165dp"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpMeet"
+        android:layout_width="match_parent"
+        android:layout_height="618dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvMeetSchedule" />
 
 
-        </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/scheduleEventButton"
+        android:layout_width="347dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_corners"
+        android:text="Schedule Event"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vpMeet" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="360dp"
-            android:layout_height="230dp"
-            android:layout_marginTop="389dp"
-            android:layout_marginStart="20dp"
-            app:cardCornerRadius="10dp"
-            android:backgroundTint="@color/color11">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="May 22, 2023 - 11:00 AM - 11:15 AM"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/color14"
-                android:textStyle="bold"
-                android:textSize="17dp"/>
-
-            <!-- Horizontal line -->
-            <View
-                android:layout_width="290dp"
-                android:layout_height="1dp"
-                android:background="@color/color10"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Meeting Title"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="60dp"
-                android:textColor="@color/color14"
-                android:textStyle="bold"
-                android:textSize="17dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="15 minute meeting (clone)"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="88dp"
-                android:textColor="@color/color3"
-                android:textSize="17dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mode : Virtual "
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="115dp"
-                android:textColor="@color/color3"
-                android:textSize="17dp"/>
-
-            <View
-                android:layout_width="290dp"
-                android:layout_height="1dp"
-                android:background="@color/color10"
-                android:layout_marginTop="155dp"
-                android:layout_marginStart="20dp"/>
-
-            <Button
-                android:layout_width="125dp"
-                android:layout_height="45dp"
-                android:text="Cancel"
-                android:textColor="@color/color15"
-                android:backgroundTint="@color/color16"
-                android:layout_marginTop="165dp"
-                android:layout_marginStart="20dp"/>
-
-            <Button
-                android:layout_width="125dp"
-                android:layout_height="45dp"
-                android:text="Reschedule"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/color15"
-                android:layout_marginTop="165dp"
-                android:layout_marginStart="165dp"/>
-
-
-        </androidx.cardview.widget.CardView>
-
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="360dp"
-            android:layout_height="230dp"
-            android:layout_marginTop="649dp"
-            android:layout_marginStart="20dp"
-            app:cardCornerRadius="10dp"
-            android:backgroundTint="@color/color11">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="May 22, 2023 - 11:00 AM - 11:15 AM"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/color14"
-                android:textStyle="bold"
-                android:textSize="17dp"/>
-
-            <!-- Horizontal line -->
-            <View
-                android:layout_width="290dp"
-                android:layout_height="1dp"
-                android:background="@color/color10"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Meeting Title"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="60dp"
-                android:textColor="@color/color14"
-                android:textStyle="bold"
-                android:textSize="17dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="15 minute meeting (clone)"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="88dp"
-                android:textColor="@color/color3"
-                android:textSize="17dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mode : Virtual "
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="115dp"
-                android:textColor="@color/color3"
-                android:textSize="17dp"/>
-
-            <View
-                android:layout_width="290dp"
-                android:layout_height="1dp"
-                android:background="@color/color10"
-                android:layout_marginTop="155dp"
-                android:layout_marginStart="20dp"/>
-
-            <Button
-                android:layout_width="125dp"
-                android:layout_height="45dp"
-                android:text="Cancel"
-                android:textColor="@color/color15"
-                android:backgroundTint="@color/color16"
-                android:layout_marginTop="165dp"
-                android:layout_marginStart="20dp"/>
-
-            <Button
-                android:layout_width="125dp"
-                android:layout_height="45dp"
-                android:text="Reschedule"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/color15"
-                android:layout_marginTop="165dp"
-                android:layout_marginStart="165dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="910dp">
-
-        <Button
-            android:id="@+id/scheduleEventButton"
-            android:layout_width="347dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="35dp"
-            android:text="Schedule Event"
-            android:textSize="25dp"
-            android:background="@drawable/rounded_corners"/>
-
-            <ImageView
+    <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/baseline_add_circle_outline_24"
                 android:layout_marginStart="59dp"
-                android:layout_marginTop="10dp"/>
-    </RelativeLayout>
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/vpMeet"
+                app:layout_constraintStart_toStartOf="parent"/>
 
 
-
-
-
-    </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -581,6 +581,7 @@
                 android:textColor="@color/color1"/>
 
             <Button
+                android:id="@+id/filterApply"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
                 android:text="Apply"

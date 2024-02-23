@@ -8,15 +8,16 @@ import android.view.ViewGroup
 import com.example.brokerage.R
 
 
-class AgentHome : Fragment() {
+class AgentShortlist : Fragment() {
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_agent_home, container, false)
+        return inflater.inflate(R.layout.fragment_agent_shortlist, container, false)
     }
-
 
 }

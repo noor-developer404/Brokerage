@@ -157,6 +157,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/meetings"
                 android:layout_width="320dp"
                 android:layout_height="115dp"
                 android:layout_marginStart="23dp"

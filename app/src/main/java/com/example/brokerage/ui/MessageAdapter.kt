@@ -1,14 +1,17 @@
 package com.example.brokerage.ui
 
 import android.content.Context
+import android.content.Intent
 import android.provider.MediaStore.Images
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.brokerage.R
+import com.example.brokerage.ui.messagebox.MessageBox
 
 class MessageAdapter (
     private val context : Context,
@@ -34,6 +37,10 @@ class MessageAdapter (
      MessageViewHolder(LayoutInflater.from(context).inflate(R.layout.list_items1, parent,false))
     override fun onBindViewHolder(holder: MessageViewHolder, position: Int) {
        holder.bindView(images[position])
+        holder.itemView.setOnClickListener{
+            val intent = Intent(context, MessageBox::class.java)
+            context.startActivity(intent)
+        }
 
     }
 

@@ -1,27 +1,31 @@
 package com.example.brokerage.ui.meeting_schedule
 
 import android.app.Dialog
-import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Gravity
-import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams
 import android.view.Window
 import android.widget.Button
-import android.widget.PopupWindow
 import androidx.appcompat.app.AppCompatActivity
 import com.example.brokerage.R
+import com.example.brokerage.databinding.ActivityMeetingScheduleBinding
+import com.google.android.material.tabs.TabLayoutMediator
+
 
 
 class meeting_schedule : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val tabList = arrayOf("Upcoming","Completed","Cancelled")
+        lateinit var binding:ActivityMeetingScheduleBinding
+
         super.onCreate(savedInstanceState)
 
-        // Set the content view to your layout
-        setContentView(R.layout.activity_meeting_schedule)
+        binding= ActivityMeetingScheduleBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
 
 
         val scheduleEventButton: Button = findViewById(R.id.scheduleEventButton)
@@ -39,5 +43,14 @@ class meeting_schedule : AppCompatActivity() {
             dialog.window?.setGravity(Gravity.BOTTOM)
 
         }
+
+        val adapter = FragmentAdapter1(supportFragmentManager, lifecycle)
+
+        binding.vpMeet.adapter = adapter
+
+        TabLayoutMediator(binding.tabLayoutMeet,binding.vpMeet){tab,position ->
+            tab.text=tabList[position]
+        }.attach()
+
     }
 }

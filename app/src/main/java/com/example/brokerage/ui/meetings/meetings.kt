@@ -1,6 +1,7 @@
 package com.example.brokerage.ui.meetings
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
@@ -11,14 +12,23 @@ import android.view.Window
 import android.widget.Button
 import android.widget.CalendarView
 import com.example.brokerage.R
+import com.example.brokerage.databinding.ActivityAgentDashboardBinding
+import com.example.brokerage.databinding.ActivityMeetingsBinding
 import java.util.Calendar
 
 class meetings : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_meetings)
+        lateinit var binding: ActivityMeetingsBinding
 
+        super.onCreate(savedInstanceState)
+        binding = ActivityMeetingsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.meetView.setOnClickListener {
+            val intent = Intent(this, meetings ::class.java)
+            startActivity(intent)
+        }
         val calendarView: CalendarView = findViewById(R.id.calendarView)
         val calendar: Calendar = Calendar.getInstance()
 

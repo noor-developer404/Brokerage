@@ -141,7 +141,7 @@
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/chipGroup"
                         style="@style/Widget.MaterialComponents.ChipGroup"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:orientation="horizontal">
@@ -225,15 +225,15 @@
 
             <RelativeLayout
                 android:id="@+id/relativeLayout1"
-                android:layout_width="467dp"
+                android:layout_width="match_parent"
                 android:layout_height="279dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView">>
+                app:layout_constraintTop_toBottomOf="@+id/textView">
 
                 <HorizontalScrollView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scrollbars="none">
 
@@ -243,7 +243,7 @@
                         android:orientation="horizontal"
                         android:background="@drawable/rounded_corners_nav">
 
-<!--                        Latest prop 1-->
+                             <!--Latest prop 1-->
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="250dp"
@@ -253,7 +253,7 @@
                             android:elevation="2dp"
                             android:id="@+id/property1">
 
-                            <!-- Heart icon -->
+
 
                             <androidx.cardview.widget.CardView
                                 android:id="@+id/cardViewL1"
@@ -375,7 +375,8 @@
                             android:layout_height="260dp"
                             android:layout_margin="8dp"
                             android:background="@drawable/rounded_corners_nav"
-                            android:elevation="3dp">
+                            android:elevation="3dp"
+                            android:id="@+id/property2">
 
                             <!-- Heart icon -->
 
@@ -497,7 +498,8 @@
                             android:layout_height="260dp"
                             android:layout_margin="8dp"
                             android:background="@drawable/rounded_corners_nav"
-                            android:elevation="3dp">
+                            android:elevation="3dp"
+                            android:id="@+id/property3">
 
                             <!-- Heart icon -->
 
@@ -644,7 +646,7 @@
 
             <RelativeLayout
                 android:id="@+id/relativeLayout"
-                android:layout_width="487dp"
+                android:layout_width="match_parent"
                 android:layout_height="279dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
@@ -654,7 +656,6 @@
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:scrollbars="none">
 
                     <LinearLayout
@@ -663,12 +664,12 @@
                         android:orientation="horizontal">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="260dp"
                             android:layout_margin="8dp"
                             android:background="@drawable/rounded_corners_nav"
                             android:elevation="2dp"
-                            android:id="@+id/property3">
+                            android:id="@+id/property4">
 
 
                             <!-- Heart icon -->
@@ -783,12 +784,13 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="260dp"
                             android:layout_margin="8dp"
                             android:background="@drawable/rounded_corners_nav"
                             android:elevation="2dp"
-                            android:id="@+id/property4">
+                            android:id="@+id/property5"
+                            >
 
 
                             <!-- Heart icon -->
@@ -901,11 +903,13 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="260dp"
                             android:layout_margin="8dp"
                             android:background="@drawable/rounded_corners_nav"
-                            android:elevation="2dp">
+                            android:elevation="2dp"
+                            android:id="@+id/property6"
+                           >
 
                             <!-- Heart icon -->
                             <androidx.cardview.widget.CardView
@@ -1449,7 +1453,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="24dp"
                 android:orientation="horizontal">
 
@@ -1460,14 +1464,14 @@
                     android:text="Featured Properties"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="25dp"/>
 
                 <TextView
                     android:id="@+id/more"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="149dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginStart="97dp"
                     android:text="More " />
             </LinearLayout>
 
@@ -1843,14 +1847,12 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-
             <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp" >
                 <!-- android:layout_constrainEnd_toEndOf="parent"
                  android:layout_constraintBottomOf_toBottomOf="parent"
                  android:layout_constraintStart_toStartOf="parent" -->
-
                 <com.google.android.material.bottomappbar.BottomAppBar
                     android:layout_width="match_parent"
                     android:layout_height="72dp"
@@ -1983,10 +1985,9 @@
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
+
+
+
         </LinearLayout>
-
-
     </ScrollView>
-
-
 </androidx.drawerlayout.widget.DrawerLayout>

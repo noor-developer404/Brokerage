@@ -46,14 +46,27 @@ class user_home : AppCompatActivity() {
             val intent = Intent(this, property_details::class.java)
             startActivity(intent)
         }
-        binding.property4.setOnClickListener {
-            val intent = Intent(this,property_details::class.java)
+        binding.property2.setOnClickListener {
+            val intent = Intent(this, property_details::class.java)
             startActivity(intent)
         }
         binding.property3.setOnClickListener {
             val intent = Intent(this, property_details::class.java)
             startActivity(intent)
         }
+        binding.property4.setOnClickListener {
+            val intent = Intent(this,property_details::class.java)
+            startActivity(intent)
+        }
+        binding.property5.setOnClickListener {
+            val intent = Intent(this, property_details::class.java)
+            startActivity(intent)
+        }
+        binding.property6.setOnClickListener {
+            val intent = Intent(this, property_details::class.java)
+            startActivity(intent)
+        }
+
         binding.userHomeFilter.setOnClickListener {
             val intent = Intent(this, filter::class.java)
             startActivity(intent)
@@ -64,6 +77,10 @@ class user_home : AppCompatActivity() {
         }
         binding.userhomeViewallNearby.setOnClickListener {
             val intent = Intent(this,PropertyListingActivity::class.java)
+            startActivity(intent)
+        }
+        binding.more.setOnClickListener {
+            val intent = Intent(this,PropertyListingActivity ::class.java)
             startActivity(intent)
         }
     }

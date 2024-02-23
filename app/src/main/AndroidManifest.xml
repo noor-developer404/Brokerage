@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -13,25 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Brokerage"
         tools:ignore="ExtraText"
-        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ui.ContactList"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".ui.agentnearby.AgentNearby"
+            android:exported="false" />
         <activity
             android:name=".ui.agentstatus.AgentStatus"
             android:exported="false" />
         <activity
             android:name=".ui.splashscreen.SplashScreen"
-            android:exported="true">
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".ui.propertylisting.PropertyListingActivity"
             android:exported="false" />
@@ -59,9 +49,11 @@
         <activity
             android:name=".ui.agentDashboard.AgentDashboard"
             android:exported="false" />
+
         <activity
             android:name=".ui.newmeetingpopup.New_Meeting_Popup"
             android:exported="false" />
+
         <activity
             android:name=".ui.passwordchanged.PasswordChanged"
             android:exported="false" />
@@ -70,16 +62,20 @@
             android:exported="false" />
         <activity
             android:name=".ui.userhome.user_home"
-            android:exported="false" />
+            android:exported="false"/>
+
         <activity
             android:name=".ui.brokerDashboard.BrokerDashboard"
             android:exported="false" />
         <activity
             android:name=".ui.meetings.meetings"
             android:exported="false" />
+
         <activity
             android:name=".ui.meeting_schedule.meeting_schedule"
-            android:exported="false" />
+            android:exported="true" >
+
+    </activity>
         <activity
             android:name=".ui.bid.BidActivity"
             android:exported="false" />
@@ -89,6 +85,7 @@
         <activity
             android:name=".ui.property_details.property_details"
             android:exported="false" />
+
         <activity
             android:name=".ui.otpvalidation.OTPvalidation"
             android:exported="false" />
@@ -100,7 +97,13 @@
             android:exported="false" />
         <activity
             android:name=".ui.signup.SignUp"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />

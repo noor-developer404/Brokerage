@@ -55,8 +55,6 @@ class GalleryFragment : Fragment() {
         view?.findViewById<RecyclerView>(R.id.recyclerViewGal)?.layoutManager = GridLayoutManager(context,2)
         val adapter = ImageAdapter(requireContext(),images)
             view?.findViewById<RecyclerView>(R.id.recyclerViewGal)?.adapter = adapter
-//        activity?.findViewById<RecyclerView>(R.id.recyclerViewGal)?.layoutManager = GridLayoutManager(context,2)
-//        activity?.findViewById<RecyclerView>(R.id.recyclerViewGal)?.adapter = adapter
         return view
     }
 
