@@ -12,19 +12,20 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.brokerage.R
+import com.example.brokerage.databinding.ActivityBrokerDashboardBinding
 
 class BrokerDashboard : AppCompatActivity() {
 
     lateinit var drawerLayout: DrawerLayout
     lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
-
+    lateinit var binding:ActivityBrokerDashboardBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
-
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_broker_dashboard)
+        binding = ActivityBrokerDashboardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // get reference to the string array that we just created
         val months = resources.getStringArray(R.array.duration)
@@ -46,6 +47,9 @@ class BrokerDashboard : AppCompatActivity() {
         actionBarDrawerToggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val navController = findNavController(R.id.broker_fragHost)
+        NavigationUI.setupWithNavController(binding.brokerBtmbar,navController)
     }
 
 

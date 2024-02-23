@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Home" android:icon="@drawable/ic_home_outline" android:id="@+id/userHome"/>
+    <item android:title="Search" android:icon="@drawable/search" android:id="@+id/userSearch"/>
+    <item android:title="Add" android:icon="@drawable/add" android:id="@+id/userAdd"/>
+    <item android:title="Shortlist" android:icon="@drawable/ic_fav" android:id="@+id/userShortlist"/>
+    <item android:title="Profile" android:icon="@drawable/ic_person" android:id="@+id/userProfile"/>
+
+</menu>

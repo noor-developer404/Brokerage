@@ -9,6 +9,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.brokerage.R
 import com.example.brokerage.databinding.ActivityAgentDashboardBinding
 import com.example.brokerage.databinding.ActivityMeetingsBinding
@@ -29,10 +31,10 @@ class AgentDashboard : AppCompatActivity() {
         binding = ActivityAgentDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.meetings.setOnClickListener {
-            val intent = Intent(this, meetings ::class.java)
-            startActivity(intent)
-        }
+//        binding.meetings.setOnClickListener {
+//            val intent = Intent(this, meetings ::class.java)
+//            startActivity(intent)
+//        }
 
 
         setSupportActionBar(findViewById(R.id.toolbar))
@@ -45,6 +47,9 @@ class AgentDashboard : AppCompatActivity() {
         actionBarDrawerToggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val navController = findNavController(R.id.agent_fragHost)
+        NavigationUI.setupWithNavController(binding.agentBtmbar,navController)
     }
 
 

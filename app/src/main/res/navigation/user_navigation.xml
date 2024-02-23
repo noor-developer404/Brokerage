@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_navigation"
+    app:startDestination="@id/userHome">
+
+    <fragment
+        android:id="@+id/userHome"
+        android:name="com.example.brokerage.ui.userhome.UserHome"
+        android:label="UserHome" />
+    <fragment
+        android:id="@+id/userAdd"
+        android:name="com.example.brokerage.ui.userhome.UserAdd"
+        android:label="fragment_user_add"
+        tools:layout="@layout/fragment_user_add" />
+    <fragment
+        android:id="@+id/userSearch"
+        android:name="com.example.brokerage.ui.userhome.UserSearch"
+        android:label="fragment_user_search"
+        tools:layout="@layout/fragment_user_search" />
+    <fragment
+        android:id="@+id/userShortlist"
+        android:name="com.example.brokerage.ui.userhome.UserShortlist"
+        android:label="fragment_user_shortlist"
+        tools:layout="@layout/fragment_user_shortlist" />
+    <fragment
+        android:id="@+id/userProfile"
+        android:name="com.example.brokerage.ui.userhome.UserProfile"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+</navigation>

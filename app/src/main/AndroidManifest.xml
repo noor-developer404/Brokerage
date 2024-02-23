@@ -48,7 +48,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.agentDashboard.AgentDashboard"
-            android:exported="false" />
+            android:exported="true">
+
+        </activity>
 
         <activity
             android:name=".ui.newmeetingpopup.New_Meeting_Popup"
@@ -66,7 +68,13 @@
 
         <activity
             android:name=".ui.brokerDashboard.BrokerDashboard"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.meetings.meetings"
             android:exported="false" />
@@ -98,11 +106,7 @@
         <activity
             android:name=".ui.signup.SignUp"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"

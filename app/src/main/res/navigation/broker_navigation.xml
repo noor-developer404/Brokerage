@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/broker_navigation"
+    app:startDestination="@id/brokerHome">
+
+    <fragment
+        android:id="@+id/brokerHome"
+        android:name="com.example.brokerage.ui.brokerDashboard.brokerHome"
+        android:label="fragment_broker_home"
+        tools:layout="@layout/fragment_broker_home" />
+    <fragment
+        android:id="@+id/brokerSearch"
+        android:name="com.example.brokerage.ui.brokerDashboard.brokerSearch"
+        android:label="fragment_broker_search"
+        tools:layout="@layout/fragment_broker_search" />
+    <fragment
+        android:id="@+id/brokerAdd"
+        android:name="com.example.brokerage.ui.brokerDashboard.brokerAdd"
+        android:label="fragment_broker_add"
+        tools:layout="@layout/fragment_broker_add" />
+    <fragment
+        android:id="@+id/brokerShortlist"
+        android:name="com.example.brokerage.ui.brokerDashboard.brokerShortlist"
+        android:label="fragment_broker_shortlist"
+        tools:layout="@layout/fragment_broker_shortlist" />
+    <fragment
+        android:id="@+id/brokerProfile"
+        android:name="com.example.brokerage.ui.brokerDashboard.brokerProfile"
+        android:label="fragment_broker_profile"
+        tools:layout="@layout/fragment_broker_profile" />
+</navigation>

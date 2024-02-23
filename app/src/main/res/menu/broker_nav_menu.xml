@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Home" android:icon="@drawable/ic_home_outline" android:id="@+id/brokerHome"/>
+    <item android:title="Search" android:icon="@drawable/search" android:id="@+id/brokerSearch"/>
+    <item android:title="Add" android:icon="@drawable/add" android:id="@+id/brokerAdd"/>
+    <item android:title="Shortlist" android:icon="@drawable/ic_fav" android:id="@+id/brokerShortlist"/>
+    <item android:title="Profile" android:icon="@drawable/ic_person" android:id="@+id/brokerProfile"/>
+</menu>

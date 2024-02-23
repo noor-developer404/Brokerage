@@ -11,20 +11,20 @@
         android:label="fragment_agent_home"
         tools:layout="@layout/fragment_agent_home" />
     <fragment
-        android:id="@+id/agentListing"
-        android:name="com.example.brokerage.ui.agentDashboard.AgentListing"
+        android:id="@+id/agentSearch"
+        android:name="com.example.brokerage.ui.agentDashboard.AgentSearch"
         android:label="fragment_agent_listing"
-        tools:layout="@layout/fragment_agent_listing" />
+        tools:layout="@layout/fragment_agent_search" />
     <fragment
-        android:id="@+id/agentSell"
-        android:name="com.example.brokerage.ui.agentDashboard.AgentSell"
+        android:id="@+id/agentAdd"
+        android:name="com.example.brokerage.ui.agentDashboard.AgentAdd"
         android:label="fragment_agent_sell"
-        tools:layout="@layout/fragment_agent_sell" />
+        tools:layout="@layout/fragment_agent_add" />
     <fragment
-        android:id="@+id/agentShortlisted"
-        android:name="com.example.brokerage.ui.agentDashboard.AgentShortlisted"
+        android:id="@+id/agentShortlist"
+        android:name="com.example.brokerage.ui.agentDashboard.AgentShortlist"
         android:label="fragment_agent_shortlisted"
-        tools:layout="@layout/fragment_agent_shortlisted" />
+        tools:layout="@layout/fragment_agent_shortlist" />
     <fragment
         android:id="@+id/agentProfile"
         android:name="com.example.brokerage.ui.agentDashboard.AgentProfile"
