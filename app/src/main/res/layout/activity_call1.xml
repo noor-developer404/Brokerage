@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="4dp"
+            android:id="@+id/call1_back_btn"
             android:src="@drawable/baseline_keyboard_arrow_left_24" />
 
 
@@ -118,7 +119,8 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/baseline_call_end_24"
                     android:layout_marginTop="9dp"
-                    android:layout_marginStart="7dp"/>
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/call1_hang_btn"/>
             </androidx.cardview.widget.CardView>
 
 

@@ -51,6 +51,14 @@ class UserHome : Fragment() {
             val intent = Intent(context, filter::class.java)
             startActivity(intent)
         }
+        view.findViewById<ConstraintLayout>(R.id.featured2).setOnClickListener {
+            val intent = Intent(context, property_details::class.java)
+            startActivity(intent)
+        }
+        view.findViewById<ConstraintLayout>(R.id.featured1).setOnClickListener {
+            val intent = Intent(context, property_details::class.java)
+            startActivity(intent)
+        }
 
         view.findViewById<TextView>(R.id.userhome_viewall_latest).setOnClickListener {
             val intent = Intent(context, PropertyListingActivity::class.java)
@@ -65,6 +73,8 @@ class UserHome : Fragment() {
             val intent = Intent(context, PropertyListingActivity::class.java)
             startActivity(intent)
         }
+
+
         return view
     }
 }

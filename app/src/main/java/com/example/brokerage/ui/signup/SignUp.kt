@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import com.example.brokerage.R
 import com.example.brokerage.databinding.ActivitySignUpBinding
 import com.example.brokerage.ui.signin.SignIn
@@ -21,8 +22,9 @@ class SignUp : AppCompatActivity() {
             startActivity(intent)
         }
         binding.signupNextBtn.setOnClickListener {
-            val intent = Intent(this,user_home::class.java)
-            startActivity(intent)
+//            val intent = Intent(this,user_home::class.java)
+//            startActivity(intent)
+            Toast.makeText(this,"Feature currently not available!",Toast.LENGTH_LONG).show()
         }
     }
 }

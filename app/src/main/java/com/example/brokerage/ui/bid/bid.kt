@@ -60,6 +60,11 @@ class BidActivity : AppCompatActivity() {
                 Toast.makeText(this, "Minimum value reached", Toast.LENGTH_SHORT).show()
             }
         }
+
+        findViewById<Button>(R.id.bid_submit_btn).setOnClickListener {
+            this.finish()
+        }
+
     }
 
     private fun updateTextView() {

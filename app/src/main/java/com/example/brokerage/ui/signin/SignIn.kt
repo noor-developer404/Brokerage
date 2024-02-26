@@ -26,15 +26,18 @@ class SignIn : AppCompatActivity() {
         binding.signinLoginBtn.setOnClickListener {
             val email = binding.enterEmail.text.toString().trim()
             val password = binding.enterpass.text.toString().trim()
-
-            // Check if the entered credentials are valid
-            if (email == "brokerage@gmail.com" && password == "12345678") {
-                // Navigate to user_home
-                val intent = Intent(this, ProfileSetup::class.java)
-                startActivity(intent)
-            } else {
-                // Show login failed toast
-                Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
+            if (email=="" || password==""){
+                // Check if the entered credentials are valid
+                Toast.makeText(this,"Enter Email and Password",Toast.LENGTH_LONG).show()
+            }else{
+                if (email == "brokerage@gmail.com" && password == "12345678") {
+                    // Navigate to user_home
+                    val intent = Intent(this, ProfileSetup::class.java)
+                    startActivity(intent)
+                } else {
+                    // Show login failed toast
+                    Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 

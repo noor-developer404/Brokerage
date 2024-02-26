@@ -46,6 +46,8 @@ class user_home : AppCompatActivity() {
 
         val navcontoller = findNavController(R.id.user_home_fragHost)
         NavigationUI.setupWithNavController(binding.userhomeBtmbar,navcontoller)
+
+
     }
 
 

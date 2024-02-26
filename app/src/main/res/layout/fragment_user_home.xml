@@ -1479,7 +1479,8 @@
                         android:layout_height="260dp"
                         android:layout_margin="8dp"
                         android:background="@drawable/rounded_corners_nav"
-                        android:elevation="2dp">
+                        android:elevation="2dp"
+                        android:id="@+id/featured1">
 
                         <!-- Heart icon -->
 
@@ -1601,7 +1602,8 @@
                         android:layout_height="260dp"
                         android:layout_margin="8dp"
                         android:background="@drawable/rounded_corners_nav"
-                        android:elevation="2dp">
+                        android:elevation="2dp"
+                        android:id="@+id/featured2">
 
                         <!-- Heart icon -->
 
