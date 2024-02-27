@@ -63,4 +63,18 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.squareup.okhttp3:okhttp:4.9.1")
     implementation("junit:junit:4.12")
+
+    //OkHttp dependency
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
+
+    implementation("com.github.scribejava:scribejava-core:8.3.1")
+
+
+    implementation("oauth.signpost:signpost-core:1.2.1.2")
+    implementation ("com.google.code.gson:gson:2.10.1")
+
+
+
+
+
 }
