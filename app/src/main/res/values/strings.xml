@@ -38,4 +38,12 @@ Round the clock security.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
+    <string name="web_client_id">504932564349-vh1cpfcts5nn4vu9uo6mvkkusg4i688c.apps.googleusercontent.com</string>
+
+
+    <string name="facebook_app_id">7753258488026560</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">20eaa8d048ecb65511545353b27bcaab</string>
+
+
 </resources>

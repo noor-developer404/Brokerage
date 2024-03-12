@@ -43,16 +43,16 @@ class Contact_Fetch_Activity : AppCompatActivity() {
 
 
        thread {
-//           data=fetchData()
+           data=fetchData()
 //           data=testFetch()
-           test()
+//           test()
 //           adapter.notifyDataSetChanged()
        }
-//        Handler().postDelayed({
-//            adapter = ContactAdapter(data)
-//            rv.adapter=adapter
-//            Toast.makeText(this,"running"+data.length(),Toast.LENGTH_SHORT).show()
-//        }, 6000)
+        Handler().postDelayed({
+            adapter = ContactAdapter(data)
+            rv.adapter=adapter
+            Toast.makeText(this,"running"+data.length(),Toast.LENGTH_SHORT).show()
+        }, 6000)
 
 
 

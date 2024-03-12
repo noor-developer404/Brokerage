@@ -9,9 +9,6 @@ import com.example.brokerage.R
 
 
 class AgentShortlist : Fragment() {
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

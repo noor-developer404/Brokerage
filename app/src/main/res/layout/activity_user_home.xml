@@ -3,7 +3,7 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/my_drawer_layout"
+    android:id="@+id/user_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/userhomebg"
@@ -18,7 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/agent_navigation_menu" />
+        app:menu="@menu/user_navigation_menu"
+        android:id="@+id/userHome_Nav"/>
 
    <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_width="match_parent"

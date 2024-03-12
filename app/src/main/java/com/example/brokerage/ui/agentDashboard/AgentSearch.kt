@@ -10,7 +10,6 @@ import com.example.brokerage.R
 
 class AgentSearch : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

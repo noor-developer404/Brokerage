@@ -39,7 +39,6 @@ class gallery : AppCompatActivity() {
             Image("Image 22",  R.drawable.img2),
             Image("Image 23", R.drawable.img3),
             Image("Image 24", R.drawable.img4)
-
         )
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = GridLayoutManager(this,2)
