@@ -3,11 +3,8 @@ package com.example.brokerage.ui.gallery
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.brokerage.R
-import com.example.brokerage.ui.Image
-import com.example.brokerage.ui.ImageAdapter
 
 class gallery : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

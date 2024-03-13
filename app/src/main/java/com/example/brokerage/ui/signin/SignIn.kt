@@ -17,6 +17,7 @@ import com.example.brokerage.ui.forgotPassword.ForgotPassword
 import com.example.brokerage.ui.profileSetup.ProfileSetup
 import com.example.brokerage.ui.signup.SignUp
 import com.example.brokerage.ui.userhome.user_home
+import com.example.brokerage.utils.Constants.LOGIN_BASE_URL
 import com.example.brokerage.utils.RetrofitInstance
 import com.example.brokerage.utils.SharedPref
 import com.facebook.CallbackManager
@@ -181,7 +182,7 @@ class SignIn : AppCompatActivity(), View.OnClickListener {
     }
 
     fun login(){
-        val instance = RetrofitInstance()
+        val instance = RetrofitInstance(LOGIN_BASE_URL)
          instance.getInstance().apiInterface.login(binding.sigiInEmail.text.toString(),"abc@gmail.com","123456",binding.signInPass.text.toString(),"android","13").enqueue(object :Callback<loginModel>{
              override fun onResponse(call: Call<loginModel>, response: Response<loginModel>) {
                  Log.e("loginDetails", "onResponse: "+ response.body()?.get(0).toString() )

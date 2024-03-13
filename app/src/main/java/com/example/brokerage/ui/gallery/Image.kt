@@ -1,4 +1,4 @@
-package com.example.brokerage.ui
+package com.example.brokerage.ui.gallery
 
 data class Image(
     val title: String,

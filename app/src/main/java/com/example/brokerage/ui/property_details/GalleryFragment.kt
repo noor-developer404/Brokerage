@@ -1,18 +1,15 @@
 package com.example.brokerage.ui.property_details
 
-import android.graphics.drawable.GradientDrawable.Orientation
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.brokerage.R
-import com.example.brokerage.ui.Image
-import com.example.brokerage.ui.ImageAdapter
+import com.example.brokerage.ui.gallery.Image
+import com.example.brokerage.ui.gallery.ImageAdapter
 
 
 class GalleryFragment : Fragment() {

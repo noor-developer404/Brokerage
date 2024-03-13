@@ -12,6 +12,7 @@ import androidx.navigation.ui.NavigationUI
 import com.example.brokerage.R
 import com.example.brokerage.databinding.ActivityUserHomeBinding
 import com.example.brokerage.ui.signin.SignIn
+import com.example.brokerage.ui.userhome.homeFrag.userHomeViewModel
 import com.example.brokerage.utils.SharedPref
 import com.google.android.material.navigation.NavigationView
 
@@ -20,10 +21,16 @@ class user_home : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
     lateinit var binding: ActivityUserHomeBinding
     lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
     lateinit var sp:SharedPref
+    lateinit var user_home_viewmodel: userHomeViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUserHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+//        user_home_viewmodel = ViewModelProvider(this,userHomeViewModelFactory(this)).get(com.example.brokerage.ui.userhome.homeFrag.userHomeViewModel::class.java)
+//        user_home_viewmodel.toast("Hello Noor")
+//        user_home_viewmodel.getNews()
+
 
         sp= SharedPref(this)
         binding.userHomeNav.setNavigationItemSelectedListener(this)
@@ -66,6 +73,4 @@ class user_home : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         binding.userDrawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
-
-
 }

@@ -1,4 +1,4 @@
-package com.example.brokerage.ui
+package com.example.brokerage.ui.messagelist
 
 data class Message(
     val title: String,

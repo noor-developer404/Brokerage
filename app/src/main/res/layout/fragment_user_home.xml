@@ -11,16 +11,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="-318dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -28,7 +24,6 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp">
-
 
                 <TextView
                     android:id="@+id/locationText"
@@ -55,7 +50,7 @@
                     android:layout_marginStart="4dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView3"
-                    app:layout_constraintTop_toBottomOf="@+id/locationText" />
+                    app:layout_constraintTop_toBottomOf="@+id/locationText"/>
 
                 <ImageView
                     android:id="@+id/bell"
@@ -66,7 +61,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.916" />
-
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -185,833 +179,79 @@
 
             </LinearLayout>
 
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_marginStart="24dp"
+                   android:layout_marginTop="16dp"
+                   android:layout_marginEnd="24dp"
+                   android:orientation="horizontal">
+
+                   <TextView
+                       android:id="@+id/latest"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:text="Latest Properties"
+                       android:textColor="@color/black"
+                       android:textSize="16sp"
+                       android:textStyle="bold" />
+
+                   <TextView
+                       android:id="@+id/userhome_viewall_latest"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="View all " />
+               </LinearLayout>
+               <androidx.recyclerview.widget.RecyclerView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:id="@+id/latestPropRV"/>
+
+           </LinearLayout>
+
+
+
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/latest"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Latest Properties"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/userhome_viewall_latest"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="View all " />
-            </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout1"
-                android:layout_width="match_parent"
-                android:layout_height="279dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
-
-                <HorizontalScrollView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="none">
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@drawable/rounded_corners_nav">
+                        android:layout_weight="1"
+                        android:text="Nearby You"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                        <!--Latest prop 1-->
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="250dp"
-                            android:layout_height="260dp"
-                            android:layout_margin="8dp"
-                            android:background="@drawable/rounded_corners_nav"
-                            android:elevation="2dp"
-                            android:id="@+id/property1">
-
-
-
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/cardViewL1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:cardCornerRadius="20dp">
-
-                                <ImageView
-                                    android:id="@+id/imageViewl1"
-                                    android:layout_width="260dp"
-                                    android:layout_height="140dp"
-                                    android:scaleType="centerCrop"
-                                    android:layout_marginStart="-5dp"
-                                    android:src="@drawable/propertyimg1"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <ImageView
-                                    android:id="@+id/like1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="220dp"
-                                    android:layout_marginTop="10dp"
-                                    android:src="@drawable/heartred"
-                                    android:scaleType="centerCrop"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                    app:layout_constraintEnd_toEndOf="@+id/cardView1"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintVertical_bias="0.09" />
-
-                                <TextView
-                                    android:id="@+id/textViewl1"
-                                    android:layout_width="248dp"
-                                    android:layout_height="23dp"
-                                    android:background="@drawable/gold_background"
-                                    android:gravity="center"
-                                    android:text="Residential Plot"
-                                    android:textColor="@color/white"
-                                    android:textSize="13dp"
-                                    android:layout_marginTop="117dp"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
-
-                            </androidx.cardview.widget.CardView>
-
-
-
-
-                            <TextView
-                                android:id="@+id/texttitle"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="12dp"
-                                android:text="Saadiyat Reserve"
-                                android:textSize="16dp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/cardViewL1" />
-
-                            <ImageView
-                                android:id="@+id/locl1"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-
-                                android:layout_marginTop="8dp"
-                                android:src="@drawable/baseline_location_on_24"
-
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitle"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitle" />
-
-                            <TextView
-                                android:id="@+id/textlocl1"
-                                android:layout_width="66dp"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:layout_marginTop="8dp"
-                                android:text="Abu Dhabi"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitle"
-                                app:layout_constraintVertical_bias="0.032" />
-
-                            <ImageView
-                                android:id="@+id/areaIconl1"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-
-                                android:layout_marginTop="40dp"
-                                android:src="@drawable/area"
-                                app:layout_constraintEnd_toStartOf="@+id/textlocl1"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitle"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitle" />
-
-                            <TextView
-                                android:id="@+id/areaTextl1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:layout_marginTop="8dp"
-                                android:text="600 to 1400 SQM"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitle"
-                                app:layout_constraintVertical_bias="0.557" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <!--                        Latest Prop 2-->
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="250dp"
-                            android:layout_height="260dp"
-                            android:layout_margin="8dp"
-                            android:background="@drawable/rounded_corners_nav"
-                            android:elevation="3dp"
-                            android:id="@+id/property2">
-
-                            <!-- Heart icon -->
-
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/cardViewL2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:cardCornerRadius="20dp">
-
-                                <ImageView
-                                    android:id="@+id/imageViewl2"
-                                    android:layout_width="260dp"
-                                    android:layout_height="140dp"
-                                    android:scaleType="centerCrop"
-                                    android:layout_marginStart="-5dp"
-                                    android:src="@drawable/propertyimg1"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <ImageView
-                                    android:id="@+id/like2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="220dp"
-                                    android:layout_marginTop="10dp"
-                                    android:src="@drawable/heartred"
-                                    android:scaleType="centerCrop"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                    app:layout_constraintEnd_toEndOf="@+id/cardView1"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintVertical_bias="0.09" />
-
-                                <TextView
-                                    android:id="@+id/textViewl2"
-                                    android:layout_width="248dp"
-                                    android:layout_height="23dp"
-                                    android:background="@drawable/gold_background"
-                                    android:gravity="center"
-                                    android:text="Residential Plot"
-                                    android:textColor="@color/white"
-                                    android:textSize="13dp"
-                                    android:layout_marginTop="117dp"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
-
-                            </androidx.cardview.widget.CardView>
-
-
-                            <TextView
-                                android:id="@+id/texttitlel2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="12dp"
-                                android:text="Saadiyat Reserve"
-                                android:textSize="16dp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/cardViewL2" />
-
-                            <ImageView
-                                android:id="@+id/locl2"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-
-                                android:layout_marginTop="8dp"
-                                android:src="@drawable/baseline_location_on_24"
-                                app:layout_constraintEnd_toStartOf="@+id/textlocl2"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitlel2"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlel2" />
-
-                            <TextView
-                                android:id="@+id/textlocl2"
-                                android:layout_width="66dp"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:layout_marginTop="8dp"
-                                android:text="Abu Dhabi"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlel2"
-                                app:layout_constraintVertical_bias="0.032" />
-
-                            <ImageView
-                                android:id="@+id/areaIconl2"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-
-                                android:layout_marginTop="40dp"
-                                android:src="@drawable/area"
-                                app:layout_constraintEnd_toStartOf="@+id/textlocl2"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitlel2"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlel2" />
-
-                            <TextView
-                                android:id="@+id/areaText2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:layout_marginTop="8dp"
-                                android:text="600 to 1400 SQM"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlel2"
-                                app:layout_constraintVertical_bias="0.557" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <!--                        Latest Prop 3-->
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="250dp"
-                            android:layout_height="260dp"
-                            android:layout_margin="8dp"
-                            android:background="@drawable/rounded_corners_nav"
-                            android:elevation="3dp"
-                            android:id="@+id/property3">
-
-                            <!-- Heart icon -->
-
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/cardViewL3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:cardCornerRadius="20dp">
-
-                                <ImageView
-                                    android:id="@+id/imageViewl3"
-                                    android:layout_width="260dp"
-                                    android:layout_height="140dp"
-                                    android:scaleType="centerCrop"
-                                    android:layout_marginStart="-5dp"
-                                    android:src="@drawable/propertyimg1"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <ImageView
-                                    android:id="@+id/like3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="220dp"
-                                    android:layout_marginTop="10dp"
-                                    android:src="@drawable/heartred"
-                                    android:scaleType="centerCrop"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                    app:layout_constraintEnd_toEndOf="@+id/cardView1"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintVertical_bias="0.09" />
-
-                                <TextView
-                                    android:id="@+id/textViewl3"
-                                    android:layout_width="248dp"
-                                    android:layout_height="23dp"
-                                    android:background="@drawable/gold_background"
-                                    android:gravity="center"
-                                    android:text="Residential Plot"
-                                    android:textColor="@color/white"
-                                    android:textSize="13dp"
-                                    android:layout_marginTop="117dp"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
-
-                            </androidx.cardview.widget.CardView>
-
-
-                            <TextView
-                                android:id="@+id/texttitlel3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="12dp"
-                                android:text="Saadiyat Reserve"
-                                android:textSize="16dp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/cardViewL3" />
-
-                            <ImageView
-                                android:id="@+id/locl3"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-                                android:layout_marginTop="8dp"
-                                android:src="@drawable/baseline_location_on_24"
-                                app:layout_constraintEnd_toStartOf="@+id/textlocl3"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitlel3"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlel3" />
-
-                            <TextView
-                                android:id="@+id/textlocl3"
-                                android:layout_width="66dp"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:layout_marginTop="8dp"
-                                android:text="Abu Dhabi"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlel3"
-                                app:layout_constraintVertical_bias="0.032" />
-
-                            <ImageView
-                                android:id="@+id/areaIconl3"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-                                android:layout_marginTop="40dp"
-                                android:src="@drawable/area"
-                                app:layout_constraintEnd_toStartOf="@+id/textlocl3"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitlel3"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlel3" />
-
-                            <TextView
-                                android:id="@+id/areaTextl3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:layout_marginTop="8dp"
-                                android:text="600 to 1400 SQM"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlel3"
-                                app:layout_constraintVertical_bias="0.557" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </LinearLayout>
-
-
-                </HorizontalScrollView>
-            </RelativeLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/nearbyYou"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Nearby You"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/userhomeViewallNearby"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="View all" />
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout"
-                android:layout_width="match_parent"
-                android:layout_height="279dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView">>
-
-                <HorizontalScrollView
+                    <TextView
+                        android:id="@+id/userhome_viewall_nearby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View all " />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scrollbars="none">
+                    android:orientation="horizontal"
+                    android:id="@+id/nearbyPropRV"/>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="260dp"
-                            android:layout_margin="8dp"
-                            android:background="@drawable/rounded_corners_nav"
-                            android:elevation="2dp"
-                            android:id="@+id/property4">
-
-
-                            <!-- Heart icon -->
-
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/cardView1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:cardCornerRadius="20dp">
-
-                                <ImageView
-                                    android:id="@+id/imageViewn1"
-                                    android:layout_width="260dp"
-                                    android:layout_height="140dp"
-                                    android:scaleType="centerCrop"
-                                    android:layout_marginStart="-5dp"
-                                    android:src="@drawable/propertyimg1"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <ImageView
-                                    android:id="@+id/circlen1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="220dp"
-                                    android:layout_marginTop="10dp"
-                                    android:src="@drawable/heartred"
-                                    android:scaleType="centerCrop"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                    app:layout_constraintEnd_toEndOf="@+id/cardView1"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintVertical_bias="0.09" />
-
-                                <TextView
-                                    android:id="@+id/textViewn1"
-                                    android:layout_width="248dp"
-                                    android:layout_height="23dp"
-                                    android:background="@drawable/gold_background"
-                                    android:gravity="center"
-                                    android:text="Residential Plot"
-                                    android:textColor="@color/white"
-                                    android:textSize="13dp"
-                                    android:layout_marginTop="117dp"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
-
-                            </androidx.cardview.widget.CardView>
-
-
-                            <TextView
-                                android:id="@+id/texttitlen1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="12dp"
-                                android:text="Saadiyat Reserve"
-                                android:textSize="16dp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/cardView1" />
-
-                            <ImageView
-                                android:id="@+id/locn1"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-                                android:layout_marginTop="8dp"
-                                android:src="@drawable/baseline_location_on_24"
-                                app:layout_constraintEnd_toStartOf="@+id/textlocn1"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitlen1"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlen1" />
-
-                            <TextView
-                                android:id="@+id/textlocn1"
-                                android:layout_width="66dp"
-                                android:layout_height="16dp"
-                                android:layout_marginTop="8dp"
-                                android:text="Abu Dhabi"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.195"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlen1"
-                                app:layout_constraintVertical_bias="0.017" />
-
-                            <ImageView
-                                android:id="@+id/areaIconn1"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-                                android:layout_marginTop="12dp"
-                                android:src="@drawable/area"
-                                app:layout_constraintEnd_toStartOf="@+id/areaTextn1"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitlen1"
-                                app:layout_constraintTop_toBottomOf="@+id/locn1" />
-
-                            <TextView
-                                android:id="@+id/areaTextn1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:text="600 to 1400 SQM"
-                                android:textSize="12dp"
-                                android:layout_marginTop="13dp"
-                                app:layout_constraintTop_toBottomOf="@+id/locn1"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintVertical_bias="0.557" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="260dp"
-                            android:layout_margin="8dp"
-                            android:background="@drawable/rounded_corners_nav"
-                            android:elevation="2dp"
-                            android:id="@+id/property5"
-                            >
-
-
-                            <!-- Heart icon -->
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/cardView2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:cardCornerRadius="20dp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent">
-
-                                <ImageView
-                                    android:id="@+id/imageViewn2"
-                                    android:layout_width="260dp"
-                                    android:layout_height="140dp"
-                                    android:layout_marginStart="-5dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/propertyimg1"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <ImageView
-                                    android:id="@+id/circlen2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="220dp"
-                                    android:layout_marginTop="10dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/heartred"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn2"
-                                    app:layout_constraintEnd_toEndOf="@+id/cardView2"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintVertical_bias="0.09" />
-
-                                <TextView
-                                    android:id="@+id/textViewn2"
-                                    android:layout_width="248dp"
-                                    android:layout_height="23dp"
-                                    android:layout_marginTop="117dp"
-                                    android:background="@drawable/gold_background"
-                                    android:gravity="center"
-                                    android:text="Apartment"
-                                    android:textColor="@color/white"
-                                    android:textSize="13dp"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
-
-                            </androidx.cardview.widget.CardView>
-
-                            <TextView
-                                android:id="@+id/texttitlen2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="12dp"
-                                android:text="Meraas Le Pont Apartments"
-                                android:textSize="16dp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
-
-                            <ImageView
-                                android:id="@+id/locn2"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-                                android:layout_marginTop="8dp"
-                                android:src="@drawable/baseline_location_on_24"
-                                app:layout_constraintEnd_toStartOf="@+id/textlocn2"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitlen2"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlen2" />
-
-                            <TextView
-                                android:id="@+id/textlocn2"
-                                android:layout_width="66dp"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:layout_marginTop="8dp"
-                                android:text="Abu Dhabi"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlen2"
-                                app:layout_constraintVertical_bias="0.032" />
-
-                            <ImageView
-                                android:id="@+id/areaIconn2"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-                                android:layout_marginTop="40dp"
-                                android:src="@drawable/area"
-                                app:layout_constraintEnd_toStartOf="@+id/areaTextn2"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitlen2"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlen2" />
-
-                            <TextView
-                                android:id="@+id/areaTextn2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:layout_marginTop="8dp"
-                                android:text="600 to 1400 SQM"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlen2"
-                                app:layout_constraintVertical_bias="0.557" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="260dp"
-                            android:layout_margin="8dp"
-                            android:background="@drawable/rounded_corners_nav"
-                            android:elevation="2dp"
-                            android:id="@+id/property6"
-                            >
-
-                            <!-- Heart icon -->
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/cardView3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:cardCornerRadius="20dp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent">
-
-                                <ImageView
-                                    android:id="@+id/imageViewn3"
-                                    android:layout_width="260dp"
-                                    android:layout_height="140dp"
-                                    android:layout_marginStart="-5dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/propertyimg1"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <ImageView
-                                    android:id="@+id/circlen3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="220dp"
-                                    android:layout_marginTop="10dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/heartred"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn3"
-                                    app:layout_constraintEnd_toEndOf="@+id/cardView3"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintVertical_bias="0.09" />
-
-                                <TextView
-                                    android:id="@+id/textViewn4"
-                                    android:layout_width="248dp"
-                                    android:layout_height="23dp"
-                                    android:layout_marginTop="117dp"
-                                    android:background="@drawable/gold_background"
-                                    android:gravity="center"
-                                    android:text="Residential Plot"
-                                    android:textColor="@color/white"
-                                    android:textSize="13dp"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
-
-                            </androidx.cardview.widget.CardView>
-
-
-                            <TextView
-                                android:id="@+id/texttitlen3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="12dp"
-                                android:text="Saadiyat Reserve"
-                                android:textSize="16dp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/cardView3" />
-
-                            <ImageView
-                                android:id="@+id/locn3"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-                                android:layout_marginTop="8dp"
-                                android:src="@drawable/baseline_location_on_24"
-                                app:layout_constraintEnd_toStartOf="@+id/textlocn3"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitlen3"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlen3" />
-
-                            <TextView
-                                android:id="@+id/textlocn3"
-                                android:layout_width="66dp"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:layout_marginTop="8dp"
-                                android:text="Abu Dhabi"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlen3"
-                                app:layout_constraintVertical_bias="0.032" />
-
-                            <ImageView
-                                android:id="@+id/areaIconn3"
-                                android:layout_width="14dp"
-                                android:layout_height="18dp"
-                                android:layout_marginTop="40dp"
-                                android:src="@drawable/area"
-                                app:layout_constraintEnd_toStartOf="@+id/areaTextn3"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="@+id/texttitlen3"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlen3" />
-
-                            <TextView
-                                android:id="@+id/areaTextn3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="36dp"
-                                android:layout_marginTop="8dp"
-                                android:text="600 to 1400 SQM"
-                                android:textSize="12dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/texttitlen3"
-                                app:layout_constraintVertical_bias="0.557" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </LinearLayout>
-
-
-                </HorizontalScrollView>
-            </RelativeLayout>
+            </LinearLayout>
 
 
             <LinearLayout
@@ -1297,8 +537,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="15dp"
                         android:background="@drawable/rounded_corners_nav"
-                        android:elevation="3dp"
-                        >
+                        android:elevation="3dp">
 
                         <ImageView
                             android:layout_width="80dp"
@@ -1329,9 +568,6 @@
                             android:textColor="@color/gray_light"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"/>
-
-
-
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
             </HorizontalScrollView>
@@ -1438,289 +674,38 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="24dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/featured"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Featured Properties"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:layout_marginTop="25dp"/>
-
-                <TextView
-                    android:id="@+id/more"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="19dp"
-                    android:layout_marginStart="97dp"
-                    android:text="More " />
-            </LinearLayout>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none">
-
+                android:orientation="vertical">
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
                     android:orientation="horizontal">
 
-                    <!--                    featured prop 1-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Featured Properties"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="250dp"
-                        android:layout_height="260dp"
-                        android:layout_margin="8dp"
-                        android:background="@drawable/rounded_corners_nav"
-                        android:elevation="2dp"
-                        android:id="@+id/featured1">
-
-                        <!-- Heart icon -->
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/cardViewF1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:cardCornerRadius="20dp">
-
-                            <ImageView
-                                android:id="@+id/imgVieww1"
-                                android:layout_width="260dp"
-                                android:layout_height="140dp"
-                                android:scaleType="centerCrop"
-                                android:layout_marginStart="-5dp"
-                                android:src="@drawable/propertyimg1"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/likeIcon1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="220dp"
-                                android:layout_marginTop="10dp"
-                                android:src="@drawable/heartred"
-                                android:scaleType="centerCrop"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                app:layout_constraintEnd_toEndOf="@+id/cardView1"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.09" />
-
-                            <TextView
-                                android:id="@+id/TV1"
-                                android:layout_width="248dp"
-                                android:layout_height="23dp"
-                                android:background="@drawable/gold_background"
-                                android:gravity="center"
-                                android:text="Residential Plot"
-                                android:textColor="@color/white"
-                                android:textSize="13dp"
-                                android:layout_marginTop="117dp"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
-
-                        </androidx.cardview.widget.CardView>
-
-
-
-                        <TextView
-                            android:id="@+id/textTitle1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="12dp"
-                            android:text="Saadiyat Reserve"
-                            android:textSize="16dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/cardViewF1" />
-
-                        <ImageView
-                            android:id="@+id/Loc1"
-                            android:layout_width="14dp"
-                            android:layout_height="18dp"
-                            android:layout_marginTop="8dp"
-                            android:src="@drawable/baseline_location_on_24"
-                            app:layout_constraintEnd_toStartOf="@+id/textLoc1"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/textTitle1"
-                            app:layout_constraintTop_toBottomOf="@+id/textTitle1" />
-
-                        <TextView
-                            android:id="@+id/textLoc1"
-                            android:layout_width="66dp"
-                            android:layout_height="16dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Abu Dhabi"
-                            android:textSize="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.195"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textTitle1"
-                            app:layout_constraintVertical_bias="0.017" />
-
-                        <ImageView
-                            android:id="@+id/AreaIcon1"
-                            android:layout_width="14dp"
-                            android:layout_height="18dp"
-                            android:layout_marginTop="12dp"
-                            android:src="@drawable/area"
-                            app:layout_constraintEnd_toStartOf="@+id/AreaText2"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/textTitle1"
-                            app:layout_constraintTop_toBottomOf="@+id/Loc1" />
-
-                        <TextView
-                            android:id="@+id/AreaText2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="16dp"
-                            android:layout_marginStart="36dp"
-                            android:layout_marginTop="8dp"
-                            android:text="600 to 1400 SQM"
-                            android:textSize="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textTitle1"
-                            app:layout_constraintVertical_bias="0.557" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <!--                    featured prop 2-->
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="250dp"
-                        android:layout_height="260dp"
-                        android:layout_margin="8dp"
-                        android:background="@drawable/rounded_corners_nav"
-                        android:elevation="2dp"
-                        android:id="@+id/featured2">
-
-                        <!-- Heart icon -->
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/cardViewF2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:cardCornerRadius="20dp">
-
-                            <ImageView
-                                android:id="@+id/imgVieww2"
-                                android:layout_width="260dp"
-                                android:layout_height="140dp"
-                                android:scaleType="centerCrop"
-                                android:layout_marginStart="-5dp"
-                                android:src="@drawable/propertyimg1"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/likeIcon2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="220dp"
-                                android:layout_marginTop="10dp"
-                                android:src="@drawable/heartred"
-                                android:scaleType="centerCrop"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                app:layout_constraintEnd_toEndOf="@+id/cardView1"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.09" />
-
-                            <TextView
-                                android:id="@+id/TV2"
-                                android:layout_width="248dp"
-                                android:layout_height="23dp"
-                                android:background="@drawable/gold_background"
-                                android:gravity="center"
-                                android:text="Residential Plot"
-                                android:textColor="@color/white"
-                                android:textSize="13dp"
-                                android:layout_marginTop="117dp"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageViewn1"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
-
-                        </androidx.cardview.widget.CardView>
-
-
-                        <TextView
-                            android:id="@+id/textTitle2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="12dp"
-                            android:text="Meraas Le Pont Apartments"
-                            android:textSize="16dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/cardViewF2" />
-
-                        <ImageView
-                            android:id="@+id/Loc2"
-                            android:layout_width="14dp"
-                            android:layout_height="18dp"
-                            android:layout_marginTop="8dp"
-                            android:src="@drawable/baseline_location_on_24"
-                            app:layout_constraintEnd_toStartOf="@+id/textLoc2"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/textTitle2"
-                            app:layout_constraintTop_toBottomOf="@+id/textTitle2" />
-
-                        <TextView
-                            android:id="@+id/textLoc2"
-                            android:layout_width="66dp"
-                            android:layout_height="16dp"
-                            android:layout_marginStart="36dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Abu Dhabi"
-                            android:textSize="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textTitle2"
-                            app:layout_constraintVertical_bias="0.032" />
-
-                        <ImageView
-                            android:id="@+id/AreaIcon2"
-                            android:layout_width="14dp"
-                            android:layout_height="18dp"
-                            android:layout_marginTop="40dp"
-                            android:src="@drawable/area"
-                            app:layout_constraintEnd_toStartOf="@+id/AreaText1"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/textTitle2"
-                            app:layout_constraintTop_toBottomOf="@+id/textTitle2" />
-
-                        <TextView
-                            android:id="@+id/AreaText1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="16dp"
-                            android:layout_marginStart="36dp"
-                            android:layout_marginTop="8dp"
-                            android:text="600 to 1400 SQM"
-                            android:textSize="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textTitle2"
-                            app:layout_constraintVertical_bias="0.557" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+                    <TextView
+                        android:id="@+id/userhome_viewall_featured"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More" />
                 </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/featuredPropRV"/>
 
-
-            </HorizontalScrollView>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/explore"

@@ -1,4 +1,4 @@
-package com.example.brokerage.ui
+package com.example.brokerage.ui.gallery
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Recycler
 import com.example.brokerage.R
 
 class ImageAdapter (

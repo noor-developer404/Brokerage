@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/userHome"
-        android:name="com.example.brokerage.ui.userhome.UserHome"
+        android:name="com.example.brokerage.ui.userhome.homeFrag.UserHome"
         android:label="UserHome" />
     <fragment
         android:id="@+id/userAdd"
