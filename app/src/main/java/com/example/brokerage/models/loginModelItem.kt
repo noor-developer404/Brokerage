@@ -1,5 +1,7 @@
 package com.example.brokerage.models
 
+import java.io.Serializable
+
 data class loginModelItem(
     val day_start: Int,
     val emailId: String,
@@ -12,4 +14,4 @@ data class loginModelItem(
     val status: Int,
     val sucessfully_complete: Int,
     val user_roles: String
-)
+):Serializable

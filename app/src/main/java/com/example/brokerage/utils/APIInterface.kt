@@ -1,8 +1,7 @@
 package com.example.brokerage.utils
 
 import com.example.brokerage.models.loginModel
-import com.example.brokerage.models.newsModel
-import org.json.JSONArray
+import com.example.brokerage.models.wallModel
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -25,8 +24,8 @@ interface APIInterface {
     ): Call<loginModel>
 
 
-    @GET("everything?q=tesla&from=2024-02-13&sortBy=publishedAt&apiKey=8f7a079b489d45929fed2b34e4795293")
-    fun getNews(): Call<newsModel>
+    @GET("fetch.php")
+    fun getWalls(): Call<wallModel>
 //        @Field("q") q:String,
 //        @Field("from") from:String,
 //        @Field("sortBy") sortBy:String,

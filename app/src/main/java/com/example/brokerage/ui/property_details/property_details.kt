@@ -7,6 +7,10 @@ import com.example.brokerage.R
 import com.example.brokerage.databinding.ActivityPropertyDetailsBinding
 import com.google.android.material.tabs.TabLayoutMediator
 import android.content.Intent
+import android.os.Build
+import androidx.lifecycle.ViewModelProvider
+import com.example.brokerage.models.wallModel
+import com.example.brokerage.models.wallModelItem
 import com.example.brokerage.ui.bid.BidActivity
 import com.example.brokerage.ui.call1.Call1
 import com.example.brokerage.ui.signup.SignUp
@@ -19,6 +23,9 @@ class property_details : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityPropertyDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val propViewModel = ViewModelProvider(this,propDetailsViewModelFactory(this)).get(propDetailsViewModel::class.java)
+        propViewModel.setData(intent,binding.propDetailsImg,binding.propDetailsRating,binding.propDetailsType)
 
         binding.propertiesDetailsBackBtn.setOnClickListener {
             val intent = Intent(this, user_home::class.java)

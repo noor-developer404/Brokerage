@@ -592,8 +592,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="15dp"
                         android:background="@drawable/rounded_corners_nav"
-                        android:elevation="3dp"
-                        >
+                        android:elevation="3dp">
 
                         <ImageView
                             android:layout_width="80dp"
@@ -728,99 +727,15 @@
                 android:layout_marginStart="26dp"
                 />
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="none"
-                android:layout_marginBottom="10dp">
-
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/city1"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="17dp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dubai"
-                        android:textSize="15dp"
-                        android:layout_marginTop="110dp"
-                        android:layout_marginStart="-55dp" />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/city2"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="45dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="AI In"
-                        android:textSize="15dp"
-                        android:layout_marginTop="110dp"
-                        android:layout_marginStart="-55dp" />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/city3"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="45dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Abu Dhabi"
-                        android:textSize="15dp"
-                        android:layout_marginTop="110dp"
-                        android:layout_marginStart="-70dp" />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/city1"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="30dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dubai"
-                        android:textSize="15dp"
-                        android:layout_marginTop="110dp"
-                        android:layout_marginStart="-60dp" />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/city2"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="45dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="AI In"
-                        android:textSize="15dp"
-                        android:layout_marginTop="110dp"
-                        android:layout_marginStart="-55dp" />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/city3"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="45dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Abu Dhabi"
-                        android:textSize="15dp"
-                        android:layout_marginTop="110dp"
-                        android:layout_marginStart="-65dp" />
-
-
+                        android:id="@+id/citiesRV"/>
                 </LinearLayout>
-            </HorizontalScrollView>
 
 
         </LinearLayout>

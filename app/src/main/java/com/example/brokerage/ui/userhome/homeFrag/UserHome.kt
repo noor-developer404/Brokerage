@@ -23,6 +23,7 @@ class UserHome : Fragment(),View.OnClickListener {
         user_home_viewmodel.setLatestProp(view.findViewById(R.id.latestPropRV))
         user_home_viewmodel.setNearbyProp(view.findViewById(R.id.nearbyPropRV))
         user_home_viewmodel.setFeaturedProp(view.findViewById(R.id.featuredPropRV))
+        user_home_viewmodel.setCitiesRv(view.findViewById(R.id.citiesRV))
 
 
         return view
